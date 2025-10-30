@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="menu.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+    
+
+
+
+
+<header class="afc-navbar sticky-top">
+  <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+    <div class="container">
+
+      <!-- Brand (logo left) -->
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="logo.png" alt="American Fried Chicken" class="brand-logo">
+        
+      </a>
+
+      <!-- Toggler (mobile) -->
+      <button class="navbar-toggler text-white border-0" type="button"
+              data-bs-toggle="collapse" data-bs-target="#afcNav"
+              aria-controls="afcNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Links (right side on desktop, collapsible on mobile) -->
+      <div class="collapse navbar-collapse" id="afcNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-4">
+          <!-- Add 'active' to highlight current page -->
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+</header>
+
+
+
+
+<main class="menu-page py-4">
+  <div class="container-fluid">
+    <div class="row">
+
+      <!-- LEFT: sticky categories (desktop only) -->
+      <aside class="col-lg-3 d-none d-lg-block">
+        <div class="menu-sidebar position-sticky" style="top: 88px;">
+          <h2 class="h1 fw-bold mb-4">MENU</h2>
+          <nav id="catNav" class="nav flex-column gap-2">
+            <a class="nav-link cat-link active" href="#sec-feast">FEASTIVAL MEALS</a>
+            <a class="nav-link cat-link" href="#sec-box">BOX MEALS</a>
+            <a class="nav-link cat-link" href="#sec-buckets">CHICKEN BUCKETS</a>
+            <a class="nav-link cat-link" href="#sec-burgers">BURGERS</a>
+            <a class="nav-link cat-link" href="#sec-veg">VEG</a>
+            <a class="nav-link cat-link" href="#sec-snacks">SNACKS</a>
+            <a class="nav-link cat-link" href="#sec-bev">BEVERAGES & DESSERTS</a>
+          </nav>
+        </div>
+      </aside>
+
+      <!-- RIGHT: content -->
+      <section class="col-lg-9">
+<div id="mobileCatBar" class="mobile-cat-bar d-lg-none">
+  <div class="scroll-inner">
+    <a class="btn-cat active" href="#sec-feast">Feastival</a>
+    <a class="btn-cat" href="#sec-box">Box Meals</a>
+    <a class="btn-cat" href="#sec-buckets">Buckets</a>
+    <a class="btn-cat" href="#sec-burgers">Burgers</a>
+    <a class="btn-cat" href="#sec-veg">Veg</a>
+    <a class="btn-cat" href="#sec-snacks">Snacks</a>
+    <a class="btn-cat" href="#sec-bev">Beverages</a>
+  </div>
+</div>
+
+        <!-- Sections -->
+        <div class="menu-section reveal fade-up" id="sec-feast">
+          <h3 class="display-6 fw-bold mb-3">FEASTIVAL MEALS</h3>
+          <div class="row g-4 row-cols-1 row-cols-md-3">
+            <!-- card -->
+            <div class="col">
+              <article class="menu-card h-100">
+                <figure class="menu-media">
+                  <img src="afc 29.jpg" alt="Chizza">
+                </figure>
+                <div class="menu-body">
+                  <h5 class="menu-title">Chizza</h5>
+                  <p class="menu-desc">Chicken fillet topped with cheese, sauce, veggies & herbs.</p>
+                  <div class="menu-price">₹279</div>
+                      <button class="btn btn-addcart w-100 mt-3">
+      Add to cart
+    </button>
+                </div>
+              </article>
+            </div>
+            <div class="col">
+              <article class="menu-card h-100">
+                <figure class="menu-media">
+                  <img src="AFC 63.jpg" alt="Chizza Combo">
+                </figure>
+                <div class="menu-body">
+                  <h5 class="menu-title">Chizza Combo</h5>
+                  <p class="menu-desc">Cult favourite Chizza with 1 Regular Pepsi.</p>
+                  <div class="menu-price">₹299</div>
+                      <button class="btn btn-addcart w-100 mt-3">
+      Add to cart
+    </button>
+                </div>
+              </article>
+            </div>
+            <div class="col">
+              <article class="menu-card h-100">
+                <figure class="menu-media">
+                  <img src="AFC65.jpg" alt="Feast Box">
+                </figure>
+                <div class="menu-body">
+                  <h5 class="menu-title">Feast Box</h5>
+                  <p class="menu-desc">A hearty combo box for one—crispy & filling.</p>
+                  <div class="menu-price">₹349</div>
+                      <button class="btn btn-addcart w-100 mt-3">
+      Add to cart
+    </button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-section reveal fade-up" id="sec-box">
+          <h3 class="display-6 fw-bold mb-3">BOX MEALS</h3>
+          <div class="row g-4 row-cols-1 row-cols-md-3">
+            <div class="col">
+              <article class="menu-card h-100">
+                <figure class="menu-media">
+                  <img src="AFC93.jpg" alt="">
+                </figure>
+                <div class="menu-body">
+                  <h5 class="menu-title">Classic Box</h5>
+                  <p class="menu-desc">Burger, fries & chicken in one great deal.</p>
+                  <div class="menu-price">₹249</div>
+                      <button class="btn btn-addcart w-100 mt-3">
+      Add to cart
+    </button>
+                </div>
+              </article>
+            </div>
+            <div class="col">
+              <article class="menu-card h-100">
+                <figure class="menu-media">
+                  <img src="AFC94.jpg" alt="">
+                </figure>
+                <div class="menu-body">
+                  <h5 class="menu-title">Zinger Box</h5>
+                  <p class="menu-desc">Zinger burger with sides & a drink.</p>
+                  <div class="menu-price">₹289</div>
+                      <button class="btn btn-addcart w-100 mt-3">
+      Add to cart
+    </button>
+                </div>
+              </article>
+            </div>
+            <div class="col">
+              <article class="menu-card h-100">
+                <figure class="menu-media">
+                  <img src="afc 29.jpg" alt="">
+                </figure>
+                <div class="menu-body">
+                  <h5 class="menu-title">Tandoori Box</h5>
+                  <p class="menu-desc">Spiced twist with our tandoori marinade.</p>
+                  <div class="menu-price">₹299</div>
+                      <button class="btn btn-addcart w-100 mt-3">
+      Add to cart
+    </button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-section reveal fade-up" id="sec-buckets">
+          <h3 class="display-6 fw-bold mb-3">CHICKEN BUCKETS</h3>
+          <div class="row g-4 row-cols-1 row-cols-md-3">
+            <div class="col">
+              <article class="menu-card h-100">
+                <figure class="menu-media">
+                  <img src="AFC 63.jpg" alt="">
+                </figure>
+                <div class="menu-body">
+                  <h5 class="menu-title">Leg Piece Bucket</h5>
+                  <p class="menu-desc">Six crispy leg pieces for the fam.</p>
+                  <div class="menu-price">₹449</div>
+                      <button class="btn btn-addcart w-100 mt-3">
+      Add to cart
+    </button>
+                </div>
+              </article>
+            </div>
+            <!-- …add more cards as needed -->
+          </div>
+        </div>
+
+        <!-- more sections: #sec-burgers, #sec-veg, #sec-snacks, #sec-bev … -->
+
+      </section>
+    </div>
+  </div>
+</main>
+
+
+
+
+
+
+<footer class="site-footer text-white">
+  <div class="container py-5">
+
+    <div class="row g-4 align-items-start">
+      <!-- Col 1: Logo + Social -->
+      <div class="col-12 col-lg-4">
+        <a href="index.html" class="d-inline-flex align-items-center mb-3">
+          <img src="logo.png" alt="American Fried Chicken" class="footer-logo">
+        </a>
+
+        <ul class="list-unstyled d-flex flex-wrap gap-3 mt-3">
+          <li><a class="social-link" href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a class="social-link" href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+          <li><a class="social-link" href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+          <li><a class="social-link" href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
+
+      <!-- Col 2: Quick links -->
+      <div class="col-12 col-lg-4">
+        <h6 class="footer-title">Quick links</h6>
+        <ul class="footer-links list-unstyled m-0">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Contact -->
+      <div class="col-12 col-lg-4">
+        <h6 class="footer-title">Contact us</h6>
+        <ul class="footer-contact list-unstyled m-0">
+          <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:+918888811111">+91 88888 11111</a>, <a href="tel:+919999922222">+91 99999 22222</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:info@americanfriedchicken.com">info@americanfriedchicken.com</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <hr class="footer-divider my-4">
+
+    <!-- Bottom bar -->
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 small text-white-75">
+      <div>americanfriedchicken Copyright © 2025. Spices. All Rights Reserved.</div>
+      <a href="/privacy/" class="link-light text-decoration-none">privacy policy</a>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
+<script>
+ (function(){
+  const brandNav = document.querySelector('.navbar, .site-navbar');
+  const mobileBar = document.getElementById('mobileCatBar');
+  const sideLinks  = document.querySelectorAll('#catNav .cat-link');          // desktop
+  const mobileLinks= document.querySelectorAll('#mobileCatBar .btn-cat');     // mobile
+  const sections   = document.querySelectorAll('.menu-section');
+
+  // expose navbar & bar heights as CSS vars (used in CSS + scrolling)
+  function setHeights(){
+    const navH = brandNav ? brandNav.offsetHeight : 56;
+    const catH = mobileBar ? mobileBar.offsetHeight : 50;
+    document.documentElement.style.setProperty('--navH', navH + 'px');
+    document.documentElement.style.setProperty('--catH', catH + 'px');
+  }
+  setHeights();
+  window.addEventListener('resize', setHeights);
+
+  function scrollToHash(hash){
+    const el = document.querySelector(hash);
+    if(!el) return;
+    const navH = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--navH')) || 56;
+    const catH = window.innerWidth < 992
+      ? (parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--catH')) || 50)
+      : 0;
+    const y = el.getBoundingClientRect().top + window.scrollY - (navH + catH + 12);
+    window.scrollTo({ top:y, behavior:'smooth' });
+  }
+
+  // click handlers (desktop + mobile)
+  document.querySelectorAll('#catNav a, #mobileCatBar a').forEach(a=>{
+    a.addEventListener('click', e=>{
+      e.preventDefault();
+      scrollToHash(a.getAttribute('href'));
+    });
+  });
+
+  // IntersectionObserver for auto-active
+  const onIntersect = entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        const id = '#' + entry.target.id;
+        // desktop
+        sideLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === id));
+        // mobile
+        mobileLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === id));
+      }
+    });
+  };
+  const io = new IntersectionObserver(onIntersect, {
+    root:null,
+    rootMargin:"-45% 0px -50% 0px",
+    threshold:0
+  });
+  sections.forEach(s => io.observe(s));
+})();
+
+
+(function(){
+  const els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window) || !els.length) {
+    els.forEach(el => el.classList.add('in-view'));
+    return;
+  }
+  const io = new IntersectionObserver((entries, obs) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      e.target.classList.add('in-view');
+      obs.unobserve(e.target);
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+
+  els.forEach(el => io.observe(el));
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact-us</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="contact.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+    
+<header class="afc-navbar sticky-top">
+  <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+    <div class="container">
+
+      <!-- Brand (logo left) -->
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="logo.png" alt="American Fried Chicken" class="brand-logo">
+        
+      </a>
+
+      <!-- Toggler (mobile) -->
+      <button class="navbar-toggler text-white border-0" type="button"
+              data-bs-toggle="collapse" data-bs-target="#afcNav"
+              aria-controls="afcNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Links (right side on desktop, collapsible on mobile) -->
+      <div class="collapse navbar-collapse" id="afcNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-4">
+          <!-- Add 'active' to highlight current page -->
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact-us.html">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+</header>
+
+
+
+<section class="contact-hero">
+  <div class="bg"></div>
+  <div class="wrap px-3">
+    <h1 class="display-5 mb-2">Let’s Talk Chicken</h1>
+    <p class="lead mb-3">Questions, catering, franchise or feedback — we’d love to hear from you. Reach any outlet or drop us a note below.</p>
+    <a href="#form" class="btn btn-brand px-4 py-2">Send a Message</a>
+  </div>
+</section>
+
+<section class="py-4">
+  <div class="container">
+    <div class="row g-3 quick-strip">
+      <div class="col-12 col-md-4">
+        <div class="qcard reveal fade-up" style="--i:0">
+          <div class="ico"><i class="fa-solid fa-phone"></i></div>
+          <div class="flex-grow-1">
+            <div class="fw-bold">Call us</div>
+            <div class="text-muted small">Every day 10:00–22:00</div>
+          </div>
+          <a href="tel:+919999922222" class="btn btn-sm btn-brand">+91 99999 22222</a>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <div class="qcard reveal fade-up" style="--i:1">
+          <div class="ico"><i class="fa-brands fa-whatsapp"></i></div>
+          <div class="flex-grow-1">
+            <div class="fw-bold">WhatsApp</div>
+            <div class="text-muted small">Quick replies</div>
+          </div>
+          <a href="https://wa.me/919999922222" class="btn btn-sm btn-brand">Chat Now</a>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <div class="qcard reveal fade-up" style="--i:2">
+          <div class="ico"><i class="fa-solid fa-envelope"></i></div>
+          <div class="flex-grow-1">
+            <div class="fw-bold">Email</div>
+            <div class="text-muted small">We reply within 24 hrs</div>
+          </div>
+          <a href="mailto:hello@friedchicken.com" class="btn btn-sm btn-brand">hello@friedchicken.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-5">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-end mb-3">
+      <h2 class="mb-0">Find an Outlet</h2>
+      <ul class="nav outlet-tabs d-none d-md-flex">
+        <li class="nav-item"><button class="nav-link active" data-filter="all">All</button></li>
+        <li class="nav-item"><button class="nav-link" data-filter="city:kochi">Kochi</button></li>
+        <li class="nav-item"><button class="nav-link" data-filter="city:trivandrum">Trivandrum</button></li>
+        <li class="nav-item"><button class="nav-link" data-filter="city:calicut">Calicut</button></li>
+      </ul>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-7">
+        <div class="row g-3 row-cols-1 row-cols-sm-2">
+          <!-- outlet card -->
+          <div class="col outlet" data-city="kochi" data-map="https://www.google.com/maps/embed?pb=!1m18!...">
+            <article class="outlet-card reveal fade-up" style="--i:0">
+              <img class="cover w-100" src="/static/img/outlets/kochi-1.jpg" alt="">
+              <div class="p-3">
+                <h6 class="mb-1">American Fried Chicken Kochi – MG Road</h6>
+                <div class="text-muted small mb-2">Open 10:00–22:30</div>
+                <div class="meta d-flex flex-column gap-1 small">
+                  <div><i class="fa-solid fa-location-dot me-1"></i>34/221, MG Road, Kochi</div>
+                  <div><i class="fa-solid fa-phone me-1"></i><a href="tel:+919876543210" class="link-dark">+91 98765 43210</a></div>
+                </div>
+                <div class="mt-2">
+                  <button class="btn btn-sm btn-outline-secondary view-map">View on Map</button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col outlet" data-city="kochi" data-map="https://www.google.com/maps/embed?pb=!1m18!...">
+            <article class="outlet-card reveal fade-up" style="--i:1">
+              <img class="cover w-100" src="/static/img/outlets/kochi-2.jpg" alt="">
+              <div class="p-3">
+                <h6 class="mb-1">American Fried Chicken Kochi – Edappally</h6>
+                <div class="text-muted small mb-2">Open 10:00–23:00</div>
+                <div class="meta d-flex flex-column gap-1 small">
+                  <div><i class="fa-solid fa-location-dot me-1"></i>Lulu Mall, Edappally</div>
+                  <div><i class="fa-solid fa-phone me-1"></i><a href="tel:+919876543211" class="link-dark">+91 98765 43211</a></div>
+                </div>
+                <div class="mt-2">
+                  <button class="btn btn-sm btn-outline-secondary view-map">View on Map</button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col outlet" data-city="trivandrum" data-map="https://www.google.com/maps/embed?pb=!1m18!...">
+            <article class="outlet-card reveal fade-up" style="--i:2">
+              <img class="cover w-100" src="/static/img/outlets/tvm-1.jpg" alt="">
+              <div class="p-3">
+                <h6 class="mb-1">American Fried Chicken Trivandrum – Pattom</h6>
+                <div class="text-muted small mb-2">Open 11:00–22:00</div>
+                <div class="meta d-flex flex-column gap-1 small">
+                  <div><i class="fa-solid fa-location-dot me-1"></i>Pattom Junction, TVM</div>
+                  <div><i class="fa-solid fa-phone me-1"></i><a href="tel:+919876543212" class="link-dark">+91 98765 43212</a></div>
+                </div>
+                <div class="mt-2">
+                  <button class="btn btn-sm btn-outline-secondary view-map">View on Map</button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col outlet" data-city="calicut" data-map="https://www.google.com/maps/embed?pb=!1m18!...">
+            <article class="outlet-card reveal fade-up" style="--i:3">
+              <img class="cover w-100" src="/static/img/outlets/calicut-1.jpg" alt="">
+              <div class="p-3">
+                <h6 class="mb-1">American Fried Chicken Calicut – Beach Road</h6>
+                <div class="text-muted small mb-2">Open 10:00–22:00</div>
+                <div class="meta d-flex flex-column gap-1 small">
+                  <div><i class="fa-solid fa-location-dot me-1"></i>Beach Road, Kozhikode</div>
+                  <div><i class="fa-solid fa-phone me-1"></i><a href="tel:+919876543213" class="link-dark">+91 98765 43213</a></div>
+                </div>
+                <div class="mt-2">
+                  <button class="btn btn-sm btn-outline-secondary view-map">View on Map</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="map-pane h-100">
+          <iframe id="gmap" src="https://www.google.com/maps/embed?pb=!1m18!..." width="100%" height="100%" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact form + Hours & FAQ -->
+<section class="py-5" id="form">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-7">
+        <div class="contact-form p-3 p-sm-4 bg-white border rounded-4">
+          <h3 class="mb-3">Send us a Message</h3>
+          <form action="#" method="post" novalidate>
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <label class="form-label">Your name</label>
+                <input type="text" class="form-control" placeholder="John Doe" required>
+              </div>
+              <div class="col-sm-6">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" placeholder="you@example.com" required>
+              </div>
+              <div class="col-sm-6">
+                <label class="form-label">Phone</label>
+                <input type="tel" class="form-control" placeholder="+91 98765 43210">
+              </div>
+              <div class="col-sm-6">
+                <label class="form-label">Outlet</label>
+                <select class="form-select">
+                  <option selected>Any / Corporate</option>
+                  <option>Kochi – MG Road</option>
+                  <option>Kochi – Edappally</option>
+                  <option>Trivandrum – Pattom</option>
+                  <option>Calicut – Beach Road</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Subject</label>
+                <input type="text" class="form-control" placeholder="Catering, franchise, feedback…">
+              </div>
+              <div class="col-12">
+                <label class="form-label">Message</label>
+                <textarea rows="5" class="form-control" placeholder="Tell us a bit about your request…" required></textarea>
+              </div>
+              <div class="col-12 d-grid d-sm-flex gap-2">
+                <button class="btn btn-brand px-4" type="submit"><i class="fa-regular fa-paper-plane me-1"></i>Send</button>
+                <a class="btn btn-outline-secondary" href="mailto:hello@friedchicken.com">Email us instead</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="hours-card mb-3">
+          <h5 class="mb-2">Opening Hours</h5>
+          <div class="row small">
+            <div class="col-6">Mon – Thu</div><div class="col-6 text-end fw-semibold">10:00 – 22:00</div>
+            <div class="col-6">Fri – Sat</div><div class="col-6 text-end fw-semibold">10:00 – 23:00</div>
+            <div class="col-6">Sunday</div><div class="col-6 text-end fw-semibold">11:00 – 22:00</div>
+          </div>
+        </div>
+
+        <div class="faq-card">
+          <h5 class="mb-2">FAQ</h5>
+          <div class="accordion" id="faq">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q1">
+                  Do you cater events?
+                </button>
+              </h2>
+              <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faq">
+                <div class="accordion-body small">
+                  Yes — parties, corporate, weddings. Tell us the headcount & venue and we’ll share packages.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q2">
+                  Is there a franchise program?
+                </button>
+              </h2>
+              <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faq">
+                <div class="accordion-body small">
+                  We’re expanding! Use the form to select “Franchise” and our team will reach out.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q3">
+                  Do you have vegan/halal options?
+                </button>
+              </h2>
+              <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faq">
+                <div class="accordion-body small">
+                  Selected outlets carry vegan sides; halal-certified stores are marked at the counter — ask our staff.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="proof mt-3 p-3 d-flex align-items-center justify-content-between flex-wrap gap-2">
+          <span class="fw-semibold"><i class="fa-solid fa-shield-heart text-brand me-1"></i>100% Fresh Oil • 0% Trans Fat</span>
+          <span class="small text-muted">ISO 22000:2018 Certified</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<footer class="site-footer text-white">
+  <div class="container py-5">
+
+    <div class="row g-4 align-items-start">
+      <!-- Col 1: Logo + Social -->
+      <div class="col-12 col-lg-4">
+        <a href="index.html" class="d-inline-flex align-items-center mb-3">
+          <img src="logo.png" alt="American Fried Chicken" class="footer-logo">
+        </a>
+
+        <ul class="list-unstyled d-flex flex-wrap gap-3 mt-3">
+          <li><a class="social-link" href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a class="social-link" href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+          <li><a class="social-link" href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+          <li><a class="social-link" href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
+
+      <!-- Col 2: Quick links -->
+      <div class="col-12 col-lg-4">
+        <h6 class="footer-title">Quick links</h6>
+        <ul class="footer-links list-unstyled m-0">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Contact -->
+      <div class="col-12 col-lg-4">
+        <h6 class="footer-title">Contact us</h6>
+        <ul class="footer-contact list-unstyled m-0">
+          <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:+918888811111">+91 88888 11111</a>, <a href="tel:+919999922222">+91 99999 22222</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:info@americanfriedchicken.com">info@americanfriedchicken.com</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <hr class="footer-divider my-4">
+
+    <!-- Bottom bar -->
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 small text-white-75">
+      <div>americanfriedchicken Copyright © 2025. Spices. All Rights Reserved.</div>
+      <a href="/privacy/" class="link-light text-decoration-none">privacy policy</a>
+    </div>
+  </div>
+</footer>
+
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
+<script>
+      // Filter tabs (desktop) for outlets
+  document.querySelectorAll('.outlet-tabs .nav-link').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      document.querySelectorAll('.outlet-tabs .nav-link').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      document.querySelectorAll('.outlet').forEach(card=>{
+        const show = (filter==='all') || (card.dataset.city === filter.split(':')[1]);
+        card.classList.toggle('d-none', !show);
+      });
+    });
+  });
+
+  // Update map when "View on Map" clicked
+  const gmap = document.getElementById('gmap');
+  document.querySelectorAll('.view-map').forEach(b=>{
+    b.addEventListener('click', (e)=>{
+      const card = e.target.closest('.outlet');
+      const src  = card?.dataset.map;
+      if(src){ gmap.src = src; }
+      // small focus scroll to map on mobile
+      if(window.innerWidth < 992){
+        document.querySelector('.map-pane').scrollIntoView({behavior:'smooth', block:'center'});
+      }
+    });
+  });
+
+
+  (function(){
+  const els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window) || !els.length) {
+    els.forEach(el => el.classList.add('in-view'));
+    return;
+  }
+  const io = new IntersectionObserver((entries, obs) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      e.target.classList.add('in-view');
+      obs.unobserve(e.target);
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+
+  els.forEach(el => io.observe(el));
+})();
+
+
+(function(){
+  const targets = document.querySelectorAll('.reveal');
+  if (!targets.length) return;
+
+  if (!('IntersectionObserver' in window)) {
+    targets.forEach(el => el.classList.add('in-view'));
+    return;
+  }
+
+  const io = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('in-view');
+      obs.unobserve(entry.target);
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+
+  targets.forEach(el => io.observe(el));
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>American Fried Chicken</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+
+</head>
+<body>
+    
+
+
+
+
+<header class="afc-navbar sticky-top">
+  <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+    <div class="container">
+
+      <!-- Brand (logo left) -->
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="logo.png" alt="American Fried Chicken" class="brand-logo">
+        
+      </a>
+
+      <!-- Toggler (mobile) -->
+      <button class="navbar-toggler text-white border-0" type="button"
+              data-bs-toggle="collapse" data-bs-target="#afcNav"
+              aria-controls="afcNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Links (right side on desktop, collapsible on mobile) -->
+      <div class="collapse navbar-collapse" id="afcNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-4">
+          <!-- Add 'active' to highlight current page -->
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+</header>
+
+
+
+
+<section class="hero-owl">
+  <div class="owl-carousel owl-theme" id="afcOwl">
+
+    <!-- Slide 1 -->
+    <div class="item hero-slide">
+      <img class="hero-bg" src="slide-main.jpg" alt="Promo 1" width="1600" height="800">
+      <div class="cta-wrap">
+        <a href="/order" class="btn btn-danger btn-pill me-2">Order Now</a>
+        <a href="/menu" class="btn btn-outline-light btn-pill">View Menu</a>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="item hero-slide">
+      <img class="hero-bg" src="slide-main.jpg" alt="Promo 2" width="1600" height="800">
+      <div class="cta-wrap">
+        <a href="/order" class="btn btn-danger btn-pill me-2">Order Now</a>
+        <a href="/menu" class="btn btn-outline-light btn-pill">View Menu</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<section class="intro-section position-relative py-5">
+  <!-- desktop-only decorations -->
+  <img src="left-2.png"  alt="" aria-hidden="true"
+       class="decor decor-left-2 d-none d-lg-block reveal from-left"  style="--delay: .05s;">
+  <img src="left-1.png"  alt="" aria-hidden="true"
+       class="decor decor-left-1 d-none d-lg-block reveal from-left"  style="--delay: .15s;">
+
+  <img src="right2.png" alt="" aria-hidden="true"
+       class="decor decor-right-1 d-none d-lg-block reveal from-right" style="--delay: .10s;">
+  <img src="right1.png" alt="" aria-hidden="true"
+       class="decor decor-right-2 d-none d-lg-block reveal from-right" style="--delay: .20s;">
+
+  <div class="container position-relative reveal fade-up" style="z-index:1; --delay:.12s;">
+    <h2 class="text-danger fw-bold text-center mb-3">Welcome to American Fried Chicken</h2>
+    <p class="lead text-muted mx-auto text-center max-w-700 mb-3">
+      At American Fried Chicken, we believe great food brings people together. Our
+      secret blend of herbs and spices has been perfected over decades, creating
+      the crunch and flavor you crave in every bite.
+    </p>
+    <p class="text-muted mx-auto text-center max-w-700">
+      At American Fried Chicken, we believe great food brings people together. Our
+      secret blend of herbs and spices has been perfected over decades, creating
+      the crunch and flavor you crave in every bite.
+    </p>
+  </div>
+</section>
+
+
+<!-- SECTION: Best Sellers heading -->
+<section class="py-4 mt-5">
+  <div class="container text-center">
+    <h3 class="text-danger fw-bold mb-0">The Best Sellers</h3>
+  </div>
+</section>
+
+
+
+<section class="menu-strip position-relative mt-5 mb-5">
+  <div class="container-fluid px-0">
+    <div id="menuOwl" class="owl-carousel owl-theme">
+
+      <!-- Tile 1 -->
+      <div class="menu-tile pg-red">
+        <h3 class="menu-title"><span class="thin">Special</span> Chichenjoy</h3>
+        <div class="menu-spacer"></div>
+        <img class="menu-img img-fluid" src="burgers.png" alt="Burger">
+      </div>
+
+      <!-- Tile 2 -->
+      <div class="menu-tile pg-orange">
+        <h3 class="menu-title">Chichenjoy</h3>
+        <div class="menu-spacer"></div>
+        <img class="menu-img img-fluid" src="fried-chicken.png" alt="Chicken & Fries">
+      </div>
+
+      <!-- Tile 3 -->
+      <div class="menu-tile pg-yellow">
+        <h3 class="menu-title">Chicken<br>Sandwich</h3>
+        <div class="menu-spacer"></div>
+        <img class="menu-img img-fluid" src="chicken-strips.png" alt="Sandwich">
+      </div>
+
+      <!-- Tile 4 -->
+      <div class="menu-tile pg-purple">
+        <h3 class="menu-title">Spaghetti</h3>
+        <div class="menu-spacer"></div>
+        <img class="menu-img img-fluid" src="chicken.png" alt="Spaghetti">
+      </div>
+
+      <!-- Add more tiles as needed… -->
+    </div>
+  </div>
+</section>
+
+<section class="menu-block py-5">
+  <div class="container">
+
+    <!-- Heading -->
+    <h2 class="text-center fw-bold text-danger mb-3">Order Something Special</h2>
+
+    <!-- Filters -->
+    <ul class="nav justify-content-center menu-filters mb-4" id="menuFilters">
+      <li class="nav-item"><button class="nav-link active" data-filter="all">All</button></li>
+      <li class="nav-item"><button class="nav-link" data-filter="burger">Burger</button></li>
+      <li class="nav-item"><button class="nav-link" data-filter="pizza">Pizza</button></li>
+      <li class="nav-item"><button class="nav-link" data-filter="pasta">Pasta</button></li>
+    </ul>
+
+    <!-- Grid -->
+    <div class="row g-4" id="menuGrid">
+      <!-- Card -->
+      <div class="col-6 col-lg-3 menu-item" data-cat="burger">
+        <div class="food-card h-100 d-flex flex-column reveal fade-up">
+          <div class="food-plate">
+            <div class="food-meta">
+              <div class="food-name">Zinger Burger</div>
+              <div class="food-price">AED 120</div>
+            </div>
+            <img src="food-1.png" alt="Zinger Burger" class="food-img">
+          </div>
+          <div class="text-center mt-3">
+            <a href="#" class="btn btn-order">Order Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3 menu-item" data-cat="pasta">
+        <div class="food-card h-100 d-flex flex-column reveal fade-up">
+          <div class="food-plate">
+            <div class="food-meta">
+              <div class="food-name">Chow Mein</div>
+              <div class="food-price">AED 120</div>
+            </div>
+            <img src="food-2.png" alt="Chow Mein" class="food-img">
+          </div>
+          <div class="text-center mt-3">
+            <a href="#" class="btn btn-order">Order Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3 menu-item" data-cat="pizza">
+        <div class="food-card h-100 d-flex flex-column reveal fade-up">
+          <div class="food-plate">
+            <div class="food-meta">
+              <div class="food-name">Cheese Pizza</div>
+              <div class="food-price">AED 120</div>
+            </div>
+            <img src="food-3.png" alt="Cheese Pizza" class="food-img">
+          </div>
+          <div class="text-center mt-3">
+            <a href="#" class="btn btn-order">Order Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3 menu-item" data-cat="pizza">
+        <div class="food-card h-100 d-flex flex-column reveal fade-up">
+          <div class="food-plate">
+            <div class="food-meta">
+              <div class="food-name">Pepperoni Pizza</div>
+              <div class="food-price">AED 120</div>
+            </div>
+            <img src="food-4.png" alt="Pepperoni Pizza" class="food-img">
+          </div>
+          <div class="text-center mt-3">
+            <a href="#" class="btn btn-order">Order Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2 (examples) -->
+      <div class="col-6 col-lg-3 menu-item" data-cat="burger">
+        <div class="food-card h-100 d-flex flex-column reveal fade-up">
+          <div class="food-plate">
+            <div class="food-meta">
+              <div class="food-name">Zinger Burger</div>
+              <div class="food-price">AED 120</div>
+            </div>
+            <img src="food-1.png" alt="Zinger Burger" class="food-img">
+          </div>
+          <div class="text-center mt-3">
+            <a href="#" class="btn btn-order">Order Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3 menu-item" data-cat="pasta">
+        <div class="food-card h-100 d-flex flex-column reveal fade-up">
+          <div class="food-plate">
+            <div class="food-meta">
+              <div class="food-name">Chow Mein</div>
+              <div class="food-price">AED 120</div>
+            </div>
+            <img src="food-2.png" alt="Chow Mein" class="food-img">
+          </div>
+          <div class="text-center mt-3">
+            <a href="#" class="btn btn-order">Order Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3 menu-item" data-cat="pizza">
+        <div class="food-card h-100 d-flex flex-column reveal fade-up">
+          <div class="food-plate">
+            <div class="food-meta">
+              <div class="food-name">Cheese Pizza</div>
+              <div class="food-price">AED 120</div>
+            </div>
+            <img src="food-3.png" alt="Cheese Pizza" class="food-img">
+          </div>
+          <div class="text-center mt-3">
+            <a href="#" class="btn btn-order">Order Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3 menu-item" data-cat="pizza">
+        <div class="food-card h-100 d-flex flex-column reveal fade-up">
+          <div class="food-plate">
+            <div class="food-meta">
+              <div class="food-name">Pepperoni Pizza</div>
+              <div class="food-price">AED 120</div>
+            </div>
+            <img src="food-4.png" alt="Pepperoni Pizza" class="food-img">
+          </div>
+          <div class="text-center mt-3">
+            <a href="#" class="btn btn-order">Order Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<section class="deal-hero">
+  <div class="deal-hero__bg" role="img" aria-label="Family Feast Deal"></div>
+
+  <div class="container">
+    <div class="deal-hero__content text-center text-white mx-auto">
+      <h2 class="deal-hero__title">Family Feast Deal</h2>
+      <p class="deal-hero__copy mb-4">
+        At American Fried Chicken, we believe great food brings people together.
+        Our secret blend of herbs and spices has been perfected over decades,
+        creating the crunch and flavor you crave in every bite.
+      </p>
+      <a href="/menu" class="btn btn-danger px-4 py-2 rounded-pill">View Menu</a>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="reviews py-5">
+  <div class="container">
+
+<div class="reveal fade-up" id="reviewsBlock">
+    <h2 class="text-center text-danger fw-bold mb-4">Reviews</h2>
+
+    <div id="reviewOwl" class="owl-carousel owl-theme">
+
+      <!-- Card 1 -->
+      <article class="t-card">
+        <header class="t-head">
+          <img src="/static/img/avatars/a1.jpg" alt="Ava Patel" class="t-avatar">
+          <div class="t-meta">
+            <div class="t-name">Ava Patel</div>
+            <div class="t-role">Marketing Manager</div>
+            <div class="t-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          </div>
+        </header>
+        <p class="t-text">
+          Ordered a custom website. The team delivered exactly what we needed with clean design and smooth performance. Highly satisfied!
+        </p>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="t-card">
+        <header class="t-head">
+          <img src="/static/img/avatars/a2.jpg" alt="Michael Chen" class="t-avatar">
+          <div class="t-meta">
+            <div class="t-name">Michael Chen</div>
+            <div class="t-role">Restaurant Owner</div>
+            <div class="t-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          </div>
+        </header>
+        <p class="t-text">
+          Fast turnaround and great communication. They set up everything end-to-end, including basic SEO. Our sales went up!
+        </p>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="t-card">
+        <header class="t-head">
+          <img src="/static/img/avatars/a3.jpg" alt="Sophia Williams" class="t-avatar">
+          <div class="t-meta">
+            <div class="t-name">Sophia Williams</div>
+            <div class="t-role">Product Lead</div>
+            <div class="t-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          </div>
+        </header>
+        <p class="t-text">
+          We migrated our menu and orders to their platform. Stable, fast, and easy for our staff. Would recommend to anyone.
+        </p>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="t-card">
+        <header class="t-head">
+          <img src="/static/img/avatars/a4.jpg" alt="Diego Rivera" class="t-avatar">
+          <div class="t-meta">
+            <div class="t-name">Diego Rivera</div>
+            <div class="t-role">Café Founder</div>
+            <div class="t-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          </div>
+        </header>
+        <p class="t-text">
+          Beautiful UI and very reliable checkout. The team was proactive with helpful ideas throughout the build.
+        </p>
+      </article>
+
+      <!-- Add more <article class="t-card">…</article> as needed -->
+    </div>
+
+    <!-- Custom nav under the carousel -->
+    <div class="review-nav text-center mt-4" aria-label="Testimonials navigation">
+      <button type="button" class="rnav rnav-prev" aria-label="Previous review">&#8592;</button>
+      <button type="button" class="rnav rnav-next" aria-label="Next review">&#8594;</button>
+    </div>
+</div>
+
+
+  </div>
+</section>
+
+
+<footer class="site-footer text-white">
+  <div class="container py-5">
+
+    <div class="row g-4 align-items-start">
+      <!-- Col 1: Logo + Social -->
+      <div class="col-12 col-lg-4">
+        <a href="index.html" class="d-inline-flex align-items-center mb-3">
+          <img src="logo.png" alt="American Fried Chicken" class="footer-logo">
+        </a>
+
+        <ul class="list-unstyled d-flex flex-wrap gap-3 mt-3">
+          <li><a class="social-link" href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a class="social-link" href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+          <li><a class="social-link" href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+          <li><a class="social-link" href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
+
+      <!-- Col 2: Quick links -->
+      <div class="col-12 col-lg-4">
+        <h6 class="footer-title">Quick links</h6>
+        <ul class="footer-links list-unstyled m-0">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Contact -->
+      <div class="col-12 col-lg-4">
+        <h6 class="footer-title">Contact us</h6>
+        <ul class="footer-contact list-unstyled m-0">
+          <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:+918888811111">+91 88888 11111</a>, <a href="tel:+919999922222">+91 99999 22222</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:info@americanfriedchicken.com">info@americanfriedchicken.com</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <hr class="footer-divider my-4">
+
+    <!-- Bottom bar -->
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 small text-white-75">
+      <div>americanfriedchicken Copyright © 2025. Spices. All Rights Reserved.</div>
+      <a href="/privacy/" class="link-light text-decoration-none">privacy policy</a>
+    </div>
+  </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
+<script>
+
+$(function(){
+  $('#afcOwl').owlCarousel({
+    items: 1,
+    loop: true,
+    nav: true,
+    dots: false,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    autoplayHoverPause: true,
+    navText: ['&#8592;','&#8594;'],   // arrows inside the circular buttons
+    smartSpeed: 600,
+    autoHeight: true,                 // <-- let image dictate height
+    responsiveRefreshRate: 100
+  });
+});
+
+
+
+$(function () {
+  const $owl = $('#menuOwl');
+
+  // If fewer than 5 tiles, clone from the start to allow desktop nav
+  const need = 5 - $owl.children().length;
+  if (need > 0) {
+    $owl.children().slice(0, need).clone(true).appendTo($owl);
+  }
+
+  $owl.owlCarousel({
+    items: 4,          // desktop
+    margin: 0,
+    loop: false,        // will now remain enabled
+    nav: true,
+    dots: false,
+    smartSpeed: 550,
+    navText: ['&#8592;','&#8594;'],
+    responsive: {
+      0:   { items: 2 },
+      576: { items: 2 },
+      768: { items: 3 },
+      992: { items: 4 }
+    }
+  });
+});
+
+
+
+  document.getElementById('menuFilters').addEventListener('click', function(e){
+    const btn = e.target.closest('[data-filter]');
+    if(!btn) return;
+
+    // active underline
+    this.querySelectorAll('.nav-link').forEach(n => n.classList.remove('active'));
+    btn.classList.add('active');
+
+    // filter items
+    const cat = btn.dataset.filter;
+    const cards = document.querySelectorAll('#menuGrid .menu-item');
+    cards.forEach(card => {
+      const show = (cat === 'all') || (card.dataset.cat === cat);
+      card.classList.toggle('d-none', !show);
+    });
+  });
+
+
+
+  $(function(){
+  const $owl = $('#reviewOwl').owlCarousel({
+    items: 3,
+    margin: 0,         // we add padding on .owl-item for gutters
+    loop: true,
+    nav: false,        // we use custom nav below
+    dots: false,
+    smartSpeed: 550,
+    responsive:{
+      0:   { items: 1 },
+      576: { items: 1 },
+      768: { items: 2 },
+      992: { items: 3 }
+    }
+  });
+
+  // Custom nav triggers
+  $('.rnav-prev').on('click', () => $owl.trigger('prev.owl.carousel'));
+  $('.rnav-next').on('click', () => $owl.trigger('next.owl.carousel'));
+});
+
+
+
+(function(){
+  const els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window) || !els.length) {
+    // Fallback: just show them
+    els.forEach(el => el.classList.add('in-view'));
+    return;
+  }
+
+  const io = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        // If you want it to animate only once:
+        obs.unobserve(entry.target);
+      }
+    });
+  }, {
+    root: null,
+    threshold: 0.15,          // 15% visible triggers
+    rootMargin: '0px 0px -10% 0px' // start a bit earlier
+  });
+
+  els.forEach(el => io.observe(el));
+})();
+
+
+
+(function(){
+  const els = document.querySelectorAll('.reveal');
+
+  // Quick stagger for menu grid (nice wave effect)
+  const menuCards = document.querySelectorAll('#menuGrid .food-card.reveal');
+  menuCards.forEach((el, i) => el.style.setProperty('--delay', (i * 0.06) + 's'));
+
+  if (!('IntersectionObserver' in window) || !els.length) {
+    els.forEach(el => el.classList.add('in-view'));
+    return;
+  }
+
+  const io = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        obs.unobserve(entry.target);  // animate once
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+
+  els.forEach(el => io.observe(el));
+})();
+
+
+
+(function(){
+  const els = document.querySelectorAll('.reveal');
+
+  if (!('IntersectionObserver' in window) || !els.length) {
+    els.forEach(el => el.classList.add('in-view'));
+    return;
+  }
+
+  const io = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+
+      const el = entry.target;
+      el.classList.add('in-view');
+      obs.unobserve(el);
+
+      // OPTIONAL: lazy-init Owl once the block is visible
+      if (el.id === 'reviewsBlock' && !el.dataset.owlInited) {
+        el.dataset.owlInited = '1';
+        $('#reviewOwl').owlCarousel({
+          items: 1,
+          loop: true,
+          margin: 16,
+          dots: true,
+          nav: false,
+          smartSpeed: 500,
+          autoHeight: true
+        });
+
+        // hook up custom nav
+        document.querySelector('.rnav-prev')?.addEventListener('click', () =>
+          $('#reviewOwl').trigger('prev.owl.carousel')
+        );
+        document.querySelector('.rnav-next')?.addEventListener('click', () =>
+          $('#reviewOwl').trigger('next.owl.carousel')
+        );
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+
+  els.forEach(el => io.observe(el));
+})();
+</script>
+
+</body>
+</html>

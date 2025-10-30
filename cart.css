@@ -1,0 +1,202 @@
+/* ========= Base / Reset ========= */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  /* Prevent iOS font size jumps and enable dark-scheme support */
+  -webkit-text-size-adjust: 100%;
+  color-scheme: light dark;
+  scroll-behavior: smooth;              /* nice scrolling */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+
+  :root{
+    --font-display: "Bangers", system-ui, sans-serif;
+    --font-body: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  }
+  h1,h2,h3,.display{ font-family: var(--font-display); letter-spacing:.5px; }
+  body{ font-family: var(--font-body); }
+  .btn{ font-weight:700; }
+
+body {
+  margin: 0;  line-height: 1.5;
+   
+  letter-spacing: .01em;
+
+}
+
+/* Gradient background like the mock */
+  .afc-navbar {
+background: linear-gradient(100deg, #FF0202 0%, #B50000 100%);
+  }
+
+  /* Brand styles */
+  .brand-logo {
+    height: 48px; /* tune to taste (32–48px range works well) */
+    width: auto;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,.25));
+  }
+  .brand-text {
+    line-height: 1.05;
+    font-weight: 700;
+    letter-spacing: .02em;
+    color: #fff;
+  }
+
+  /* Nav links */
+  .navbar .nav-link {
+    color: rgba(255,255,255,.85);
+    font-weight: 500;
+  }
+  .navbar .nav-link:hover,
+  .navbar .nav-link:focus {
+    color: #fff;
+  }
+  .navbar .nav-link.active {
+    color: #fff;
+    font-weight: 700;
+  }
+
+  /* Make the default Bootstrap toggler icon visible on dark bg */
+  .navbar-toggler {
+    outline: none;
+  }
+  .navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    width: 1.5rem; height: 1.5rem;
+  }
+
+  /* Spacing & height harmony */
+  .navbar { min-height: 64px; }
+  .brand-logo{
+  /* make it white */
+  filter: brightness(0) invert(1) drop-shadow(0 2px 6px rgba(0,0,0,.25));
+}
+/* kill the border/ring on the hamburger */
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+/* or zero out the Bootstrap var */
+.navbar { --bs-navbar-toggler-focus-width: 0; }
+/* Section fallback gradient (if image fails) */
+
+
+
+
+/* Gradient background */
+.site-footer{
+  background: linear-gradient(100deg, #FF0000 0%, #A90000 100%);
+}
+
+/* Logo size */
+.footer-logo {
+    height: 58px; /* tune to taste (32–48px range works well) */
+    width: auto;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,.25));
+}
+.footer-logo{
+    filter: brightness(0) invert(1) drop-shadow(0 2px 6px rgba(0,0,0,.25));
+}
+
+
+/* Social round buttons */
+.social-link{
+  --size: 42px;
+  width: var(--size); height: var(--size);
+  display: inline-grid; place-items: center;
+  color: #fff; text-decoration: none;
+  border: 2px solid rgba(255,255,255,.9);
+  border-radius: 50%;
+  transition: background .2s ease, transform .2s ease, color .2s ease, border-color .2s ease;
+}
+.social-link:hover{
+  background: rgba(255,255,255,.12);
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Section titles with white underline */
+.footer-title{
+  font-weight: 700; letter-spacing:.2px; margin-bottom:.75rem;
+  position: relative;
+}
+.footer-title::after{
+  content:""; display:block; width:34px; height:3px; margin-top:.35rem;
+  background:#fff; border-radius:3px; opacity:.85;
+}
+
+/* Links & contact */
+.footer-links a{
+  color: rgba(255,255,255,.92);
+  text-decoration: none;
+  display:block; padding:.25rem 0;
+}
+.footer-links a:hover{ color:#fff; text-decoration: underline; }
+
+.footer-contact li{
+  display:flex; gap:.6rem; align-items:flex-start; padding:.35rem 0;
+  color: rgba(255,255,255,.9);
+}
+.footer-contact i{ margin-top:.2rem; width:1.1rem; text-align:center; }
+.footer-contact a{ color: rgba(255,255,255,.92); text-decoration:none; }
+.footer-contact a:hover{ color:#fff; text-decoration: underline; }
+
+/* Divider line like mock */
+.footer-divider{
+  border: 0; height: 1px;
+  background: rgba(255,255,255,.35);
+}
+
+/* Responsive spacing tweaks */
+@media (max-width: 576px){
+  .social-link{ --size: 38px; }
+}
+  :root{ --brand:#d81218; }
+  .cart-h1{ font-weight:900; letter-spacing:.5px; }
+  .item-row{
+    background:#faf9f8;
+    border:1px solid #eee;
+    border-radius:16px;
+    padding:18px;
+  }
+  .item-img{
+    width:170px; height:120px; object-fit:contain; background:#fff; border-radius:10px;
+  }
+  .qty{
+    display:flex; align-items:center; gap:12px;
+    background:#fff; border:1px solid #e6e6e6; border-radius:999px; padding:4px 10px;
+  }
+  .qty .btn{
+    width:36px; height:36px; border-radius:50%; border:1px solid #ddd; color:#333; background:#fff;
+    display:grid; place-items:center;
+  }
+  .qty .btn:disabled{ opacity:.4; }
+  .price{ font-weight:700; }
+  .remove-link{ color:#0b5ed7; text-decoration:underline; font-weight:600; }
+
+  .summary{
+    position:sticky; top:90px;
+    border:1px solid #eee; border-radius:16px; background:#fff; padding:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+  }
+  .summary h5{ font-weight:900; letter-spacing:.3px; }
+  .summary .form-check{ padding-left:1.8rem; }
+  .btn-checkout{
+    background:var(--brand); color:#fff; font-weight:800; border-radius:999px;
+  }
+  .btn-checkout:hover{ background:#b90f13; color:#fff; }
+
+  /* small helpers */
+  .line{ border-top:1px solid #eee; margin:12px 0; }
+  .back-link{ text-decoration:underline; color:#0b5ed7; }

@@ -1,0 +1,325 @@
+/* ========= Base / Reset ========= */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  /* Prevent iOS font size jumps and enable dark-scheme support */
+  -webkit-text-size-adjust: 100%;
+  color-scheme: light dark;
+  scroll-behavior: smooth;              /* nice scrolling */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+
+  :root{
+    --font-display: "Bangers", system-ui, sans-serif;
+    --font-body: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  }
+  h1,h2,h3,.display{ font-family: var(--font-display); letter-spacing:.5px; }
+  body{ font-family: var(--font-body); }
+  .btn{ font-weight:700; }
+
+body {
+  margin: 0;  line-height: 1.5;
+   
+  letter-spacing: .01em;
+
+}
+
+
+/* Gradient background like the mock */
+  .afc-navbar {
+background: linear-gradient(100deg, #FF0202 0%, #B50000 100%);
+  }
+
+  /* Brand styles */
+  .brand-logo {
+    height: 48px; /* tune to taste (32–48px range works well) */
+    width: auto;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,.25));
+  }
+  .brand-text {
+    line-height: 1.05;
+    font-weight: 700;
+    letter-spacing: .02em;
+    color: #fff;
+  }
+
+  /* Nav links */
+  .navbar .nav-link {
+    color: rgba(255,255,255,.85);
+    font-weight: 500;
+  }
+  .navbar .nav-link:hover,
+  .navbar .nav-link:focus {
+    color: #fff;
+  }
+  .navbar .nav-link.active {
+    color: #fff;
+    font-weight: 700;
+  }
+
+  /* Make the default Bootstrap toggler icon visible on dark bg */
+  .navbar-toggler {
+    outline: none;
+  }
+  .navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    width: 1.5rem; height: 1.5rem;
+  }
+
+  /* Spacing & height harmony */
+  .navbar { min-height: 64px; }
+  .brand-logo{
+  /* make it white */
+  filter: brightness(0) invert(1) drop-shadow(0 2px 6px rgba(0,0,0,.25));
+}
+/* kill the border/ring on the hamburger */
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+/* or zero out the Bootstrap var */
+.navbar { --bs-navbar-toggler-focus-width: 0; }
+/* Section fallback gradient (if image fails) */
+
+
+
+
+/* Gradient background */
+.site-footer{
+  background: linear-gradient(100deg, #FF0000 0%, #A90000 100%);
+}
+
+/* Logo size */
+.footer-logo {
+    height: 58px; /* tune to taste (32–48px range works well) */
+    width: auto;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,.25));
+}
+.footer-logo{
+    filter: brightness(0) invert(1) drop-shadow(0 2px 6px rgba(0,0,0,.25));
+}
+
+
+/* Social round buttons */
+.social-link{
+  --size: 42px;
+  width: var(--size); height: var(--size);
+  display: inline-grid; place-items: center;
+  color: #fff; text-decoration: none;
+  border: 2px solid rgba(255,255,255,.9);
+  border-radius: 50%;
+  transition: background .2s ease, transform .2s ease, color .2s ease, border-color .2s ease;
+}
+.social-link:hover{
+  background: rgba(255,255,255,.12);
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Section titles with white underline */
+.footer-title{
+  font-weight: 700; letter-spacing:.2px; margin-bottom:.75rem;
+  position: relative;
+}
+.footer-title::after{
+  content:""; display:block; width:34px; height:3px; margin-top:.35rem;
+  background:#fff; border-radius:3px; opacity:.85;
+}
+
+/* Links & contact */
+.footer-links a{
+  color: rgba(255,255,255,.92);
+  text-decoration: none;
+  display:block; padding:.25rem 0;
+}
+.footer-links a:hover{ color:#fff; text-decoration: underline; }
+
+.footer-contact li{
+  display:flex; gap:.6rem; align-items:flex-start; padding:.35rem 0;
+  color: rgba(255,255,255,.9);
+}
+.footer-contact i{ margin-top:.2rem; width:1.1rem; text-align:center; }
+.footer-contact a{ color: rgba(255,255,255,.92); text-decoration:none; }
+.footer-contact a:hover{ color:#fff; text-decoration: underline; }
+
+/* Divider line like mock */
+.footer-divider{
+  border: 0; height: 1px;
+  background: rgba(255,255,255,.35);
+}
+
+/* Responsive spacing tweaks */
+@media (max-width: 576px){
+  .social-link{ --size: 38px; }
+}
+
+
+
+/* Sidebar links */
+.menu-sidebar .nav-link{
+  padding: .5rem 0;
+  color: #1a1a1a;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+}
+.menu-sidebar .nav-link.active{
+  color: #d81218;
+}
+
+/* Mobile category bar */
+.mobile-cat-scroller{
+  display: flex;
+  overflow-x: auto;
+  gap: .5rem;
+  padding-bottom: .25rem;
+  scrollbar-width: none;
+}
+.mobile-cat-scroller::-webkit-scrollbar{ display:none; }
+.mobile-cat-scroller .btn{
+  white-space: nowrap;
+}
+.mobile-cat-scroller .btn.active{
+  border-color:#d81218;
+  color:#d81218;
+}
+
+/* Section spacing and anchor offset for smooth-scroll */
+.menu-section{
+  scroll-margin-top: 96px;  /* so headings don't hide behind navbar */
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+}
+
+/* Cards */
+.menu-card{
+  background:#fff;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: box-shadow .2s ease, transform .2s ease;
+}
+.menu-card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0,0,0,.06);
+}
+.menu-media{
+  aspect-ratio: 16 / 10;
+  background:#fafafa;
+  display:block; margin:0;
+}
+.menu-media img{
+  width:100%; height:100%; object-fit: contain;
+}
+.menu-body{ padding: 14px 16px 16px; }
+.menu-title{ margin:0 0 4px; font-weight:700; }
+.menu-desc{ color:#666; margin:0 0 .5rem; font-size:.95rem; }
+.menu-price{ font-weight:800; color:#111; }
+
+/* Make the right column narrower on very wide screens for nicer reading width */
+@media (min-width: 1400px){
+  .menu-page .col-lg-9{ max-width: 900px; }
+}
+:root{ --brand-red:#d81218; }
+
+/* mobile bar (only matters < lg) */
+@media (max-width: 991.98px){
+  .mobile-cat-bar{
+    position: sticky;                /* sticks under your navbar */
+    top: var(--navH,64px);           /* height of your navbar */
+    z-index: 1030;
+    background:#fff;
+    border-bottom:1px solid #eee;
+    padding:8px 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,.06);
+  }
+  .mobile-cat-bar .scroll-inner{
+    display:flex; gap:.5rem; overflow-x:auto; scrollbar-width:none;
+  }
+  .mobile-cat-bar .scroll-inner::-webkit-scrollbar{ display:none; }
+
+  /* pills */
+  .btn-cat{
+    display:inline-block;
+    padding:.45rem .9rem;
+    border:1.8px solid #d9d9d9;
+    border-radius:10px;
+    font-weight:600;
+    color:#444; text-decoration:none; white-space:nowrap;
+    background:#fff;
+    transition:background .15s,border-color .15s,color .15s;
+  }
+  .btn-cat:hover{ border-color:#bbb; }
+  .btn-cat.active{
+    background:var(--brand-red);
+    border-color:var(--brand-red);
+    color:#fff;
+  }
+
+  /* ensure sections don't hide under the fixed bar + navbar */
+  .menu-section{ 
+    scroll-margin-top: calc(var(--navH,64px) + var(--catH,50px) + 12px);
+  }
+}
+/* Add-to-cart button: brand red, white text, pill shape */
+.btn-addcart{
+  background: #e80f16;          /* red */
+  color: #fff;                   /* white text */
+  font-weight: 700;
+  border: 2px solid #fff;        /* thin white border (as requested) */
+  border-radius: 999px;          /* pill */
+  padding: .55rem 1.1rem;
+  box-shadow: 0 8px 22px rgba(232, 15, 22, .25);
+}
+.btn-addcart:hover,
+.btn-addcart:focus{
+  background: #c90d13;           /* darker red on hover */
+  color: #fff;
+  border-color: #fff;
+}
+/* === Reveal base === */
+.reveal { opacity: 0; will-change: transform, opacity; }
+.reveal.fade-up { transform: translateY(26px); }
+.reveal.in-view { 
+  opacity: 1; 
+  transform: none; 
+  transition: transform 700ms cubic-bezier(.22,.82,.25,1), opacity 700ms ease-out;
+}
+
+/* Stagger menu cards after the section becomes visible */
+.menu-section.in-view .menu-card{
+  transform: translateY(10px);
+  opacity: 0;
+  transition: transform 500ms cubic-bezier(.22,.82,.25,1), opacity 500ms ease-out;
+  transition-delay: calc(var(--i, 0) * 120ms);
+}
+.menu-section.in-view .menu-card{
+  transform: none;
+  opacity: 1;
+}
+
+/* Motion-safety */
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal.in-view,
+  .menu-section .menu-card,
+  .menu-section.in-view .menu-card {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+
+/* keep your existing card styles */

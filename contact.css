@@ -1,0 +1,296 @@
+/* ========= Base / Reset ========= */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  /* Prevent iOS font size jumps and enable dark-scheme support */
+  -webkit-text-size-adjust: 100%;
+  color-scheme: light dark;
+  scroll-behavior: smooth;              /* nice scrolling */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+
+  :root{
+    --font-display: "Bangers", system-ui, sans-serif;
+    --font-body: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  }
+  h1,h2,h3,.display{ font-family: var(--font-display); letter-spacing:.5px; }
+  body{ font-family: var(--font-body); }
+  .btn{ font-weight:700; }
+
+body {
+  margin: 0;  line-height: 1.5;
+   
+  letter-spacing: .01em;
+
+}
+
+
+/* Gradient background like the mock */
+  .afc-navbar {
+background: linear-gradient(100deg, #FF0202 0%, #B50000 100%);
+  }
+
+  /* Brand styles */
+  .brand-logo {
+    height: 48px; /* tune to taste (32–48px range works well) */
+    width: auto;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,.25));
+  }
+  .brand-text {
+    line-height: 1.05;
+    font-weight: 700;
+    letter-spacing: .02em;
+    color: #fff;
+  }
+
+  /* Nav links */
+  .navbar .nav-link {
+    color: rgba(255,255,255,.85);
+    font-weight: 500;
+  }
+  .navbar .nav-link:hover,
+  .navbar .nav-link:focus {
+    color: #fff;
+  }
+  .navbar .nav-link.active {
+    color: #fff;
+    font-weight: 700;
+  }
+
+  /* Make the default Bootstrap toggler icon visible on dark bg */
+  .navbar-toggler {
+    outline: none;
+  }
+  .navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    width: 1.5rem; height: 1.5rem;
+  }
+
+  /* Spacing & height harmony */
+  .navbar { min-height: 64px; }
+  .brand-logo{
+  /* make it white */
+  filter: brightness(0) invert(1) drop-shadow(0 2px 6px rgba(0,0,0,.25));
+}
+/* kill the border/ring on the hamburger */
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+/* or zero out the Bootstrap var */
+.navbar { --bs-navbar-toggler-focus-width: 0; }
+/* Section fallback gradient (if image fails) */
+
+
+
+
+/* Gradient background */
+.site-footer{
+  background: linear-gradient(100deg, #FF0000 0%, #A90000 100%);
+}
+
+/* Logo size */
+.footer-logo {
+    height: 58px; /* tune to taste (32–48px range works well) */
+    width: auto;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,.25));
+}
+.footer-logo{
+    filter: brightness(0) invert(1) drop-shadow(0 2px 6px rgba(0,0,0,.25));
+}
+
+
+/* Social round buttons */
+.social-link{
+  --size: 42px;
+  width: var(--size); height: var(--size);
+  display: inline-grid; place-items: center;
+  color: #fff; text-decoration: none;
+  border: 2px solid rgba(255,255,255,.9);
+  border-radius: 50%;
+  transition: background .2s ease, transform .2s ease, color .2s ease, border-color .2s ease;
+}
+.social-link:hover{
+  background: rgba(255,255,255,.12);
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Section titles with white underline */
+.footer-title{
+  font-weight: 700; letter-spacing:.2px; margin-bottom:.75rem;
+  position: relative;
+}
+.footer-title::after{
+  content:""; display:block; width:34px; height:3px; margin-top:.35rem;
+  background:#fff; border-radius:3px; opacity:.85;
+}
+
+/* Links & contact */
+.footer-links a{
+  color: rgba(255,255,255,.92);
+  text-decoration: none;
+  display:block; padding:.25rem 0;
+}
+.footer-links a:hover{ color:#fff; text-decoration: underline; }
+
+.footer-contact li{
+  display:flex; gap:.6rem; align-items:flex-start; padding:.35rem 0;
+  color: rgba(255,255,255,.9);
+}
+.footer-contact i{ margin-top:.2rem; width:1.1rem; text-align:center; }
+.footer-contact a{ color: rgba(255,255,255,.92); text-decoration:none; }
+.footer-contact a:hover{ color:#fff; text-decoration: underline; }
+
+/* Divider line like mock */
+.footer-divider{
+  border: 0; height: 1px;
+  background: rgba(255,255,255,.35);
+}
+
+/* Responsive spacing tweaks */
+@media (max-width: 576px){
+  .social-link{ --size: 38px; }
+}
+
+  :root{
+    --brand:#d81218;
+    --brand-dark:#a80f13;
+  }
+
+  /* ===== Hero ===== */
+  .contact-hero{
+    position:relative; overflow:hidden; color:#fff;
+    min-height: clamp(320px, 48vh, 520px);
+    display:grid; place-items:center;
+  }
+  .contact-hero .bg{
+    position:absolute; inset:0;
+    background:
+      linear-gradient(0deg, rgba(0,0,0,.55), rgba(0,0,0,.35)),
+      url("bg-image.png") center/cover no-repeat;
+  }
+  .contact-hero .wrap{ position:relative; z-index:1; text-align:center; max-width:900px; }
+  .contact-hero h1{ font-weight:800; letter-spacing:.3px; }
+  .contact-hero p { color:rgba(255,255,255,.92); }
+
+  /* ===== Quick strip ===== */
+  .quick-strip .qcard{
+    background:#fff; border:1px solid #eee; border-radius:16px; padding:16px;
+    display:flex; align-items:center; gap:12px;
+    box-shadow:0 10px 26px rgba(0,0,0,.04);
+  }
+  .quick-strip .ico{
+    width:42px; height:42px; border-radius:50%; display:grid; place-items:center;
+    background:rgba(216,18,24,.1); color:var(--brand);
+  }
+  .btn-brand{
+    background:var(--brand); color:#fff; border:2px solid #fff; border-radius:999px;
+    font-weight:700; box-shadow:0 12px 28px rgba(216,18,24,.28);
+  }
+  .btn-brand:hover{ background:var(--brand-dark); color:#fff; }
+
+  /* ===== Outlets ===== */
+  .outlet-tabs .nav-link{
+    border:1.5px solid #e6e6e6; color:#333; border-radius:10px; margin-right:.5rem;
+  }
+  .outlet-tabs .nav-link.active{ background:var(--brand); border-color:var(--brand); color:#fff; }
+  .outlet-card{
+    border:1px solid #eee; border-radius:16px; overflow:hidden; height:100%;
+    transition:transform .2s, box-shadow .2s;
+  }
+  .outlet-card:hover{ transform:translateY(-2px); box-shadow:0 16px 40px rgba(0,0,0,.06); }
+  .outlet-card .cover{ aspect-ratio:16/9; background:#fafafa; }
+  .outlet-card .meta i{ width:18px; text-align:center; color:var(--brand); }
+
+  .map-pane{
+    border:1px solid #eee; border-radius:16px; min-height:320px; overflow:hidden;
+  }
+
+  /* Your existing outlet styles … */
+
+.reveal { opacity: 0; will-change: transform, opacity; }
+.reveal.fade-up { transform: translateY(22px); }
+.reveal.in-view {
+  opacity: 1;
+  transform: none;
+  transition: transform 700ms cubic-bezier(.22,.82,.25,1), opacity 700ms ease-out;
+}
+
+/* Stagger each card using --i from inline style */
+.outlet-card.reveal {
+  /* keep your hover transitions and add reveal delay */
+  transition-delay: calc(var(--i, 0) * 120ms);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal.in-view, .outlet-card.reveal {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+
+  /* ===== Form ===== */
+  .contact-form .form-control, .contact-form .form-select{
+    border-radius:12px; border:1px solid #e6e6e6;
+  }
+  .contact-form .input-group-text{ border-radius:12px 0 0 12px; background:#fff; }
+
+  /* ===== Hours & FAQ ===== */
+  .hours-card, .faq-card{
+    border:1px solid #eee; border-radius:16px; padding:16px; background:#fff;
+  }
+  .accordion-button:not(.collapsed){ color:#111; background:#fff; box-shadow:none; }
+
+  /* ===== Social proof bar ===== */
+  .proof{
+    background: linear-gradient(100deg, rgba(255,0,0,.10) 0%, rgba(169,0,0,.10) 100%);
+    border:1px dashed rgba(216,18,24,.35); border-radius:16px;
+  }
+
+  /* utility */
+  .text-brand{ color:var(--brand); }
+
+
+
+  /* your existing styles … */
+
+/* === Reveal base === */
+.reveal { opacity: 0; will-change: transform, opacity; }
+.reveal.fade-up { transform: translateY(24px); }
+.reveal.in-view {
+  opacity: 1;
+  transform: none;
+  transition: transform 700ms cubic-bezier(.22,.82,.25,1), opacity 700ms ease-out;
+}
+
+/* Stagger per card in the quick strip */
+.quick-strip .qcard {
+  /* keep your existing qcard look */
+  transition: box-shadow .2s ease, transform .2s ease,
+              opacity 500ms ease-out, transform 500ms cubic-bezier(.22,.82,.25,1);
+  transition-delay: calc(var(--i, 0) * 120ms);
+}
+
+/* Accessibility: reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal.in-view, .quick-strip .qcard {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}

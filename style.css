@@ -1,0 +1,659 @@
+/* ========= Base / Reset ========= */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  /* Prevent iOS font size jumps and enable dark-scheme support */
+  -webkit-text-size-adjust: 100%;
+  color-scheme: light dark;
+  scroll-behavior: smooth;              /* nice scrolling */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+
+  :root{
+    --font-display: "Bangers", system-ui, sans-serif;
+    --font-body: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  }
+  h1,h2,h3,.display{ font-family: var(--font-display); letter-spacing:.5px; }
+  body{ font-family: var(--font-body); }
+  .btn{ font-weight:700; }
+
+body {
+  margin: 0;  line-height: 1.5;
+   
+  letter-spacing: .01em;
+
+}
+
+
+/* Gradient background like the mock */
+  .afc-navbar {
+background: linear-gradient(100deg, #FF0202 0%, #B50000 100%);
+  }
+
+  /* Brand styles */
+  .brand-logo {
+    height: 48px; /* tune to taste (32–48px range works well) */
+    width: auto;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,.25));
+  }
+  .brand-text {
+    line-height: 1.05;
+    font-weight: 700;
+    letter-spacing: .02em;
+    color: #fff;
+  }
+
+  /* Nav links */
+  .navbar .nav-link {
+    color: rgba(255,255,255,.85);
+    font-weight: 500;
+  }
+  .navbar .nav-link:hover,
+  .navbar .nav-link:focus {
+    color: #fff;
+  }
+  .navbar .nav-link.active {
+    color: #fff;
+    font-weight: 700;
+  }
+
+  /* Make the default Bootstrap toggler icon visible on dark bg */
+  .navbar-toggler {
+    outline: none;
+  }
+  .navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    width: 1.5rem; height: 1.5rem;
+  }
+
+  /* Spacing & height harmony */
+  .navbar { min-height: 64px; }
+  .brand-logo{
+  /* make it white */
+  filter: brightness(0) invert(1) drop-shadow(0 2px 6px rgba(0,0,0,.25));
+}
+/* kill the border/ring on the hamburger */
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+/* or zero out the Bootstrap var */
+.navbar { --bs-navbar-toggler-focus-width: 0; }
+/* Section fallback gradient (if image fails) */
+.hero-owl{
+  background: linear-gradient(100deg,#FF0202 0%, #B50000 100%);
+}
+
+/* Carousel needs a positioning context for absolute nav/CTAs */
+#afcOwl { position: relative; }
+
+/* Each slide: image sets the height */
+.hero-slide{ position: relative; }
+
+/* Main slide image */
+.hero-bg{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit: cover;
+}
+
+/* CTA buttons (bottom-right) */
+.cta-wrap{
+  position:absolute; z-index:3;
+  right: clamp(8px, 4vw, 48px);
+  bottom: 6%;
+  display:flex; align-items:center;
+  gap: 10px;
+}
+.btn-pill{
+  border-radius:999px;
+  padding:.75rem 1.25rem;
+  font-weight:600;
+  box-shadow:0 12px 26px rgba(0,0,0,.25);
+}
+
+/* Owl nav: circular arrows, vertically centered */
+#afcOwl .owl-nav{ position:absolute; inset:0; pointer-events:none; }
+#afcOwl .owl-prev, 
+#afcOwl .owl-next{
+  position:absolute; top:50%; transform:translateY(-50%);
+  width:56px; height:56px; border-radius:50%;
+  border:2px solid rgba(255,255,255,.85);
+  background: transparent !important;
+  color:#fff !important; font-size:22px !important; line-height:52px !important;
+  text-align:center;
+  transition: transform .2s ease, background .2s ease, border-color .2s ease;
+  pointer-events:auto;
+}
+#afcOwl .owl-prev{ left: clamp(6px, 2vw, 28px); }
+#afcOwl .owl-next{ right: clamp(6px, 2vw, 28px); }
+#afcOwl .owl-prev:hover, 
+#afcOwl .owl-next:hover{
+  background: rgba(255,255,255,.08) !important;
+  border-color:#fff;
+  transform:translateY(-50%) scale(1.06);
+}
+
+/* Hide dots */
+#afcOwl .owl-dots{ display:none; }
+
+/* Smaller CTA buttons (all screens) */
+.cta-wrap .btn-pill{
+  padding: .5rem .9rem;   /* was .75rem 1.25rem */
+  font-size: .95rem;      /* was ~1rem+ depending on bootstrap */
+  border-radius: 999px;
+  box-shadow: 0 8px 18px rgba(0,0,0,.18);
+}
+
+/* Make the outline one a bit thinner so it looks lighter */
+.cta-wrap .btn-outline-light.btn-pill{
+  border-width: 2px;      /* default is 1–2; set explicitly */
+}
+
+/* Optional: even smaller on mobile */
+@media (max-width: 576px){
+  .cta-wrap .btn-pill{
+    padding: .25rem 0.8rem;
+    font-size: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,.16);
+  }
+}
+
+
+/* Section framing — keep frame, allow vertical overflow only */
+.intro-section{
+  position: relative;
+  background:#fff;
+  /* frame drawn with inset shadows so bottom isn’t clipped */
+
+
+  /* important: no horizontal scroll, allow vertical overflow */
+  overflow-x: clip;      /* best: hides x-overflow without scrollbars */
+  overflow-y: visible;   /* let images bleed vertically */
+}
+
+/* Fallback for browsers that don’t support overflow: clip */
+@supports not (overflow: clip){
+  .intro-section{ overflow-x: hidden; }
+}
+
+
+/* Constrain text width */
+.max-w-700{ max-width:720px; }
+
+/* --- Common decor base (unchanged) --- */
+.intro-section .decor{
+  position:absolute;
+  z-index:0;
+  height:auto;
+  pointer-events:none;
+  filter:drop-shadow(0 14px 34px rgba(0,0,0,.28));
+  transform-origin: 50% 80%;
+}
+
+/* ===== Your exact placements (UNCHANGED) ===== */
+/* Big burger + cola, bottom-left */
+.decor-left-1{
+  left:-50px;              /* bleed outside */
+  bottom:-230px;
+  width: clamp(50px, 13vw, 420px);
+  transform: rotate(80deg) scale(1.0);
+  z-index:0;
+}
+
+/* Small garnish top-left */
+.decor-left-2{
+  left:-40px;
+  top:  6px;
+  width: clamp(110px, 12vw, 170px);
+  transform: rotate(38deg);
+  z-index:0;
+}
+
+/* Big fries cone, top-right */
+.decor-right-1{
+  right:-100px;            /* bleed outside */
+  top:-10px;
+  width: clamp(100px, 30vw, 540px);
+  transform: rotate(-128deg) scale(1.0);
+  z-index:2;
+}
+
+/* Small tomato, near fries rim */
+.decor-right-2{
+  right: 84px;
+  top:   46px;
+  width: clamp(70px, 8vw, 120px);
+  transform: rotate(-20deg) scale(1.0);
+  z-index:2;
+}
+
+/* ===== XL (≥1200px) and 2XL (≥1400px) tweaks (UNCHANGED) ===== */
+@media (min-width: 1200px){
+  .decor-left-1{ left:-70px; bottom:-90px; transform: rotate(-80deg) scale(1.0); }
+  .decor-right-1{ right:-150px; top:120px;  transform: rotate(18deg)  scale(1.08); }
+}
+
+@media (min-width: 1400px){
+  .decor-left-1{ transform: rotate(19deg) scale(1.2); }
+  .decor-right-1{ transform: rotate(-19deg) scale(1.12); }
+}
+
+/* ====== Layout / no gaps ====== */
+.menu-strip { background: transparent; }
+#menuOwl .owl-stage-outer { padding:0; margin:0; }
+#menuOwl .owl-stage { display:flex; }
+#menuOwl .owl-item { padding:0 !important; margin:0 !important; } /* no gaps */
+
+
+/* ===== Scroll reveal base ===== */
+.reveal { opacity: 0; will-change: transform, opacity; }
+.reveal.from-left  { transform: translateX(-42px); }
+.reveal.from-right { transform: translateX( 42px); }
+.reveal.fade-up    { transform: translateY(18px); }
+
+/* When element enters viewport */
+.reveal.in-view {
+  opacity: 1;
+  transform: none;
+  transition:
+    transform 700ms cubic-bezier(.22,.82,.25,1),
+    opacity   700ms ease-out;
+  transition-delay: var(--delay, 0s);
+}
+
+/* Respect reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal.in-view {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+
+/* ====== Tile (no fixed height) ====== */
+.menu-tile{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;            /* title -> spacer -> image */
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  color: #fff;
+  padding-block: clamp(14px, 2.2vw, 22px) clamp(16px, 2.6vw, 24px);
+  overflow: hidden;
+}
+
+/* Title at the top (in normal flow) */
+.menu-title{
+  margin: 0;
+  width: 100%;
+  padding-inline: 16px;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: .2px;
+  font-size: clamp(20px, 2.6vw, 40px);
+}
+.menu-title .thin{ font-weight:300; font-style:italic; margin-right:.25em; }
+
+/* Flexible spacer pushes image down without fixing tile height */
+.menu-spacer{
+  flex: 1 1 auto;
+  min-height: clamp(12px, 2vh, 24px); /* tiny cushion so titles don't touch images */
+}
+
+/* Food PNG centered at bottom (in flow) */
+.menu-img{
+  width: min(85%, 420px);
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 16px 40px rgba(0,0,0,.35));
+  pointer-events: none;
+  margin-top: clamp(8px, 1.2vw, 14px);
+}
+
+/* ====== Backgrounds (per “pg”) ====== */
+.pg-red    { background: linear-gradient(180deg, #d81218 0%, #b40202 100%); }
+.pg-orange { background: linear-gradient(180deg, #ff7a00 0%, #ff4f00 100%); }
+.pg-yellow { background: linear-gradient(180deg, #ffd24a 0%, #f1bb00 100%); color:#3a2100; }
+.pg-purple { background: linear-gradient(180deg, #5a288b 0%, #3b0f5c 100%); }
+
+/* ====== Nav controls (transparent circle, centered vertically) ====== */
+#menuOwl .owl-nav{
+  position:absolute; inset:0; pointer-events:none;
+}
+#menuOwl .owl-prev, 
+#menuOwl .owl-next{
+  position:absolute; top:50%; transform:translateY(-50%);
+  width:54px; height:54px; border-radius:50%;
+  border:2px solid rgba(255,255,255,.9);
+  background: transparent !important;
+  color:#fff !important; font-size:22px !important; line-height:50px !important;
+  text-align:center;
+  pointer-events:auto;
+  transition: transform .2s ease, background .2s ease, border-color .2s ease;
+  z-index:3;
+}
+#menuOwl .owl-prev{ left: 10px; }
+#menuOwl .owl-next{ right:10px; }
+#menuOwl .owl-prev:hover, 
+#menuOwl .owl-next:hover{
+  background: rgba(255,255,255,.1) !important;
+  border-color:#fff;
+  transform:translateY(-50%) scale(1.06);
+}
+/* 1) Make the carousel row flex so items stretch to the same height */
+#menuOwl .owl-stage{ display:flex; }
+#menuOwl .owl-item{ display:flex; }          /* allow child to stretch */
+#menuOwl .menu-tile{ flex: 1 1 auto; }       /* tile fills the item */
+
+/* 2) Give each tile a consistent responsive height range */
+.menu-tile{
+  min-height: clamp(300px, 34vw, 460px);     /* tweak to taste */
+}
+
+/* Optional: slightly smaller on phones */
+@media (max-width: 576px){
+  .menu-tile{ min-height: clamp(260px, 58vw, 360px); }
+}
+
+
+/* Hide dots (set to block if wanted) */
+#menuOwl .owl-dots{ display:none; }
+
+/* ====== Responsive ====== */
+@media (max-width: 768px){
+  .menu-title{ font-size: clamp(18px, 4.6vw, 28px); }
+  .menu-img{ width: min(86%, 360px); }
+  #menuOwl .owl-prev, #menuOwl .owl-next{ width:46px; height:46px; line-height:42px !important; font-size:18px !important; }
+}
+@media (max-width: 576px){
+  .menu-title{ font-size: clamp(18px, 5.4vw, 24px); }
+  .menu-img{ width: min(90%, 320px); }
+}
+/* Heading spacing */
+.menu-block h2 { letter-spacing:.3px; }
+
+/* Filter pills */
+.menu-filters .nav-link{
+  color:#111; font-weight:600; border:0; background:transparent;
+  position:relative; padding:.25rem .75rem;
+}
+.menu-filters .nav-link.active{ color:#d91117; }
+.menu-filters .nav-link.active::after{
+  content:""; position:absolute; left:10%; right:10%; bottom:-8px;
+  height:3px; background:#d91117; border-radius:3px;
+}
+
+/* Card container */
+.food-card { }
+
+/* Yellow panel */
+.food-plate{
+  position:relative;
+  background:#f5b523;         /* yellow */
+  border-radius:18px;
+  min-height: 180px;
+  padding:16px;
+  overflow:hidden;
+}
+
+/* Name + price (top-right-ish) */
+.food-meta{
+  display:flex; flex-direction:column; align-items:flex-end; gap:2px;
+  color:#5b2a00; font-weight:700;
+}
+.food-name{ font-weight:700; }
+.food-price{ color:#9a2a00; }
+
+/* PNG image anchored to bottom */
+.food-img{
+  position:absolute; left:12px; right:12px; bottom:-8px;
+  width:auto; height:68%; object-fit:contain;
+  margin:auto; /* centers horizontally */
+  filter: drop-shadow(0 12px 28px rgba(0,0,0,.25));
+  pointer-events:none;
+}
+
+/* Order button */
+.btn-order{
+  background:#e80f16; color:#fff; font-weight:700;
+  border-radius:999px; padding:.55rem 1.25rem;
+  box-shadow:0 8px 20px rgba(232,15,22,.25);
+}
+.btn-order:hover{ color:#fff; background:#c90d13; }
+
+/* Responsive tweaks */
+@media (max-width: 576px){
+  .food-plate{ min-height: 160px; }
+  .food-img{ height:62%; }
+}
+/* ===== Scroll reveal base (reuse across sections) ===== */
+.reveal { opacity: 0; will-change: transform, opacity; }
+.reveal.fade-up { transform: translateY(24px); }
+
+.reveal.in-view{
+  opacity: 1;
+  transform: none;
+  transition:
+    transform 700ms cubic-bezier(.22,.82,.25,1),
+    opacity   700ms ease-out;
+  transition-delay: var(--delay, 0s); /* optional per-card stagger */
+}
+
+@media (prefers-reduced-motion: reduce){
+  .reveal, .reveal.in-view{
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+
+
+/* ===== Hero base ===== */
+.deal-hero{
+  position: relative;
+  min-height: clamp(340px, 55vh, 520px); /* responsive height */
+  display: grid;
+  place-items: center;                   /* centers container */
+  overflow: hidden;
+}
+
+/* Background image + darkening overlay */
+.deal-hero__bg{
+  position: absolute; inset: 0;
+  background-image: url("bg-image.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Option 1: overlay layer for consistent darkening */
+}
+.deal-hero__bg::after{
+  content: "";
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,.45);          /* darkness strength */
+  /* or try: background: linear-gradient(0deg, rgba(0,0,0,.55), rgba(0,0,0,.35)); */
+}
+
+/* Centered text content */
+.deal-hero__content{
+  position: relative; z-index: 1;       /* above the overlay */
+  max-width: min(900px, 92%);
+}
+
+/* Typography (responsive) */
+.deal-hero__title{
+  font-weight: 800;
+  line-height: 1.05;
+  margin-bottom: .5rem;
+  font-size: clamp(28px, 5vw, 56px);
+}
+.deal-hero__copy{
+  color: rgba(255,255,255,.9);
+  font-size: clamp(14px, 1.8vw, 18px);
+  line-height: 1.6;
+  margin-left: auto; margin-right: auto;
+  max-width: 58ch;                      /* comfortable line length */
+}
+
+/* Button emphasis */
+.btn-danger{
+  box-shadow: 0 10px 30px rgba(233, 19, 29, .35);
+}
+
+/* Small-screen tweaks */
+@media (max-width: 576px){
+  .deal-hero{ min-height: 380px; }
+  .deal-hero__copy{ max-width: 48ch; }
+}
+/* Card look */
+.t-card{
+  background:#fff;
+  border:1px solid #e6e6e6;
+  border-radius:14px;
+  padding:18px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.03);
+  height:100%;
+}
+.t-head{ display:flex; gap:12px; align-items:flex-start; margin-bottom:10px; }
+.t-avatar{
+  width:46px; height:46px; border-radius:50%; object-fit:cover;
+  flex: 0 0 46px;
+}
+.t-meta{ line-height:1.2; }
+.t-name{ font-weight:700; }
+.t-role{ font-size:.9rem; color:#888; margin-top:2px; }
+.t-stars{ color:#e21a1a; letter-spacing:2px; margin-top:6px; font-size:1rem; }
+.t-text{ color:#555; margin:10px 0 0; }
+
+/* Owl spacing */
+#reviewOwl .owl-stage{ display:flex; }
+#reviewOwl .owl-item{ padding:0 12px; } /* gutter between cards */
+
+/* Bottom nav: red outlined circular buttons */
+.review-nav{ display:flex; justify-content:center; gap:14px; }
+.rnav{
+  width:44px; height:44px; border-radius:50%;
+  background:transparent;
+  border:2px solid #e21a1a;
+  color:#e21a1a; font-size:18px; line-height:1;
+  display:grid; place-items:center;
+  transition:transform .15s ease, background .15s ease, color .15s ease;
+}
+.rnav:hover{ background:#e21a1a; color:#fff; transform:scale(1.05); }
+
+/* Hide default Owl dots/nav inside the track */
+#reviewOwl .owl-dots{ display:none; }
+#reviewOwl .owl-nav{ display:none; }
+
+/* Responsive: 1 on phones, 2 on tablets, 3 on desktop handled in JS */
+@media (max-width: 576px){
+  #reviewOwl .owl-item{ padding:0 8px; }
+}
+
+/* Scroll-reveal base */
+.reveal { opacity: 0; will-change: transform, opacity; }
+.reveal.fade-up { transform: translateY(24px); }
+.reveal.in-view{
+  opacity: 1;
+  transform: none;
+  transition:
+    transform 700ms cubic-bezier(.22,.82,.25,1),
+    opacity   700ms ease-out;
+}
+
+@media (prefers-reduced-motion: reduce){
+  .reveal, .reveal.in-view{
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+
+
+/* Gradient background */
+.site-footer{
+  background: linear-gradient(100deg, #FF0000 0%, #A90000 100%);
+}
+
+/* Logo size */
+.footer-logo {
+    height: 58px; /* tune to taste (32–48px range works well) */
+    width: auto;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,.25));
+}
+.footer-logo{
+    filter: brightness(0) invert(1) drop-shadow(0 2px 6px rgba(0,0,0,.25));
+}
+
+
+/* Social round buttons */
+.social-link{
+  --size: 42px;
+  width: var(--size); height: var(--size);
+  display: inline-grid; place-items: center;
+  color: #fff; text-decoration: none;
+  border: 2px solid rgba(255,255,255,.9);
+  border-radius: 50%;
+  transition: background .2s ease, transform .2s ease, color .2s ease, border-color .2s ease;
+}
+.social-link:hover{
+  background: rgba(255,255,255,.12);
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Section titles with white underline */
+.footer-title{
+  font-weight: 700; letter-spacing:.2px; margin-bottom:.75rem;
+  position: relative;
+}
+.footer-title::after{
+  content:""; display:block; width:34px; height:3px; margin-top:.35rem;
+  background:#fff; border-radius:3px; opacity:.85;
+}
+
+/* Links & contact */
+.footer-links a{
+  color: rgba(255,255,255,.92);
+  text-decoration: none;
+  display:block; padding:.25rem 0;
+}
+.footer-links a:hover{ color:#fff; text-decoration: underline; }
+
+.footer-contact li{
+  display:flex; gap:.6rem; align-items:flex-start; padding:.35rem 0;
+  color: rgba(255,255,255,.9);
+}
+.footer-contact i{ margin-top:.2rem; width:1.1rem; text-align:center; }
+.footer-contact a{ color: rgba(255,255,255,.92); text-decoration:none; }
+.footer-contact a:hover{ color:#fff; text-decoration: underline; }
+
+/* Divider line like mock */
+.footer-divider{
+  border: 0; height: 1px;
+  background: rgba(255,255,255,.35);
+}
+
+/* Responsive spacing tweaks */
+@media (max-width: 576px){
+  .social-link{ --size: 38px; }
+}

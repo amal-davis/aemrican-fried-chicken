@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+                    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="checkout.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+    
+
+
+<header class="afc-navbar sticky-top">
+  <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+    <div class="container">
+
+      <!-- Brand (logo left) -->
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="logo.png" alt="American Fried Chicken" class="brand-logo">
+        
+      </a>
+
+      <!-- Toggler (mobile) -->
+      <button class="navbar-toggler text-white border-0" type="button"
+              data-bs-toggle="collapse" data-bs-target="#afcNav"
+              aria-controls="afcNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Links (right side on desktop, collapsible on mobile) -->
+      <div class="collapse navbar-collapse" id="afcNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-4">
+          <!-- Add 'active' to highlight current page -->
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+</header>
+
+
+
+<main class="container py-4">
+  <div class="d-flex flex-wrap align-items-center gap-3 mb-3">
+    <h1 class="co-title mb-0">CHECKOUT</h1>
+    <div class="secure d-flex align-items-center gap-2">
+      <i class="fa-solid fa-lock"></i> <span>Secure Checkout</span>
+    </div>
+  </div>
+
+  <div class="row g-4">
+
+    <!-- LEFT: info -->
+    <div class="col-lg-8">
+
+      <!-- Pick-up info -->
+      <section class="co-panel mb-3">
+        <div class="co-label mb-3">Pick up info</div>
+
+        <div class="d-flex align-items-start gap-3">
+          <div class="ico-dot"><i class="fa-solid fa-location-dot"></i></div>
+          <div class="flex-grow-1">
+            <div class="fw-bold">American Fried Chicken Trissur</div>
+            <div class="text-muted small">
+              Selex East Mall East Fort, Thrissur, Kerala 680005, India
+            </div>
+          </div>
+          <a href="#" class="link-ghost ms-auto">Change</a>
+        </div>
+
+        <div class="co-line"></div>
+
+        <div class="d-flex align-items-center gap-3">
+          <div class="ico-dot"><i class="fa-regular fa-clock"></i></div>
+          <div class="fw-semibold">ASAP</div>
+        </div>
+      </section>
+
+      <!-- Pick-up options -->
+      <section class="co-panel mb-3">
+        <div class="co-label mb-3">Pick up options</div>
+
+        <div class="form-check ms-1">
+          <input class="form-check-input" type="radio" name="pickup" id="optStore" checked>
+          <label class="form-check-label fw-semibold" for="optStore">
+            Pick up from the store
+          </label>
+        </div>
+
+        <div class="form-check ms-1 mt-2">
+          <input class="form-check-input" type="radio" name="pickup" id="optCurb">
+          <label class="form-check-label fw-semibold" for="optCurb">
+            Curbside (call when you arrive)
+          </label>
+        </div>
+      </section>
+
+      <!-- Sign in / guest -->
+      <section class="co-panel mb-3">
+        <div class="co-label mb-3">Sign in / Sign up to your account</div>
+
+        <div class="d-grid d-sm-flex align-items-center gap-3">
+          <button class="btn btn-pill-black flex-grow-1">Sign In / Sign up</button>
+          <a href="#" class="link-ghost">Continue as a Guest</a>
+        </div>
+      </section>
+
+      <!-- Optional: payment / notes panels can go here -->
+
+    </div>
+
+    <!-- RIGHT: summary -->
+    <div class="col-lg-4">
+      <aside class="summary">
+        <h5 class="mb-2">Order Summary</h5>
+        <div class="sum-line"></div>
+
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <div class="fw-bold">2 items</div>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+
+        <div class="d-flex justify-content-between small py-1">
+          <span>Subtotal</span>
+          <span>₹<span id="sSubtotal">508.00</span></span>
+        </div>
+        <div class="d-flex justify-content-between small py-1">
+          <span>GST</span>
+          <span>₹<span id="sGst">25.40</span></span>
+        </div>
+
+        <hr class="my-3">
+
+        <div class="d-flex justify-content-between total-row">
+          <strong>Total:</strong>
+          <strong>₹<span id="sTotal">533.40</span></strong>
+        </div>
+      </aside>
+    </div>
+
+  </div>
+</main>
+
+
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
+</body>
+</html>
