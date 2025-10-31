@@ -23,6 +23,13 @@ html {
   body{ font-family: var(--font-body); }
   .btn{ font-weight:700; }
 
+
+html, body {
+  overflow-x: hidden;   /* hide horizontal scroll */
+}
+
+
+  
 body {
   margin: 0;  line-height: 1.5;
    
