@@ -1,0 +1,216 @@
+/* ========= Base / Reset ========= */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  /* Prevent iOS font size jumps and enable dark-scheme support */
+  -webkit-text-size-adjust: 100%;
+  color-scheme: light dark;
+  scroll-behavior: smooth;              /* nice scrolling */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+
+  :root{
+    --font-display: "Bangers", system-ui, sans-serif;
+    --font-body: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  }
+  h1,h2,h3,.display{ font-family: var(--font-display); letter-spacing:.5px; }
+  body{ font-family: var(--font-body); }
+  .btn{ font-weight:700; }
+
+
+html, body {
+  overflow-x: hidden;   /* hide horizontal scroll */
+}
+
+
+  
+body {
+  margin: 0;  line-height: 1.5;
+   
+  letter-spacing: .01em;
+
+}
+
+
+/* Gradient background like the mock */
+  .afc-navbar {
+background: linear-gradient(100deg, #FF0202 0%, #B50000 100%);
+  }
+
+  /* Brand styles */
+  .brand-logo {
+    height: 48px; /* tune to taste (32–48px range works well) */
+    width: auto;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,.25));
+  }
+  .brand-text {
+    line-height: 1.05;
+    font-weight: 700;
+    letter-spacing: .02em;
+    color: #fff;
+  }
+
+  /* Nav links */
+  .navbar .nav-link {
+    color: rgba(255,255,255,.85);
+    font-weight: 500;
+  }
+  .navbar .nav-link:hover,
+  .navbar .nav-link:focus {
+    color: #fff;
+  }
+  .navbar .nav-link.active {
+    color: #fff;
+    font-weight: 700;
+  }
+
+  /* Make the default Bootstrap toggler icon visible on dark bg */
+  .navbar-toggler {
+    outline: none;
+  }
+  .navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    width: 1.5rem; height: 1.5rem;
+  }
+
+  /* Spacing & height harmony */
+  .navbar { min-height: 64px; }
+  .brand-logo{
+  /* make it white */
+  filter: brightness(0) invert(1) drop-shadow(0 2px 6px rgba(0,0,0,.25));
+}
+/* kill the border/ring on the hamburger */
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+/* or zero out the Bootstrap var */
+.navbar { --bs-navbar-toggler-focus-width: 0; }
+/* Section fallback gradient (if image fails) */
+
+
+
+
+/* Gradient background */
+.site-footer{
+  background: linear-gradient(100deg, #FF0000 0%, #A90000 100%);
+}
+
+/* Logo size */
+.footer-logo {
+    height: 58px; /* tune to taste (32–48px range works well) */
+    width: auto;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,.25));
+}
+.footer-logo{
+    filter: brightness(0) invert(1) drop-shadow(0 2px 6px rgba(0,0,0,.25));
+}
+
+
+/* Social round buttons */
+.social-link{
+  --size: 42px;
+  width: var(--size); height: var(--size);
+  display: inline-grid; place-items: center;
+  color: #fff; text-decoration: none;
+  border: 2px solid rgba(255,255,255,.9);
+  border-radius: 50%;
+  transition: background .2s ease, transform .2s ease, color .2s ease, border-color .2s ease;
+}
+.social-link:hover{
+  background: rgba(255,255,255,.12);
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Section titles with white underline */
+.footer-title{
+  font-weight: 700; letter-spacing:.2px; margin-bottom:.75rem;
+  position: relative;
+}
+.footer-title::after{
+  content:""; display:block; width:34px; height:3px; margin-top:.35rem;
+  background:#fff; border-radius:3px; opacity:.85;
+}
+
+/* Links & contact */
+.footer-links a{
+  color: rgba(255,255,255,.92);
+  text-decoration: none;
+  display:block; padding:.25rem 0;
+}
+.footer-links a:hover{ color:#fff; text-decoration: underline; }
+
+.footer-contact li{
+  display:flex; gap:.6rem; align-items:flex-start; padding:.35rem 0;
+  color: rgba(255,255,255,.9);
+}
+.footer-contact i{ margin-top:.2rem; width:1.1rem; text-align:center; }
+.footer-contact a{ color: rgba(255,255,255,.92); text-decoration:none; }
+.footer-contact a:hover{ color:#fff; text-decoration: underline; }
+
+/* Divider line like mock */
+.footer-divider{
+  border: 0; height: 1px;
+  background: rgba(255,255,255,.35);
+}
+
+/* Responsive spacing tweaks */
+@media (max-width: 576px){
+  .social-link{ --size: 38px; }
+}
+:root{
+  --brand:#ff0000;
+  --brand-dark:#a90000;
+  --ink:#121212;
+}
+
+.franchise-apply .tag{
+  display:inline-block; padding:.35rem .7rem; border-radius:999px;
+  background:rgba(255,0,0,.09); color:#a90000; font-weight:800; letter-spacing:.04em;
+}
+
+.card-brand{
+  border:1px solid #eee; border-radius:16px; overflow:hidden;
+  box-shadow:0 10px 28px rgba(0,0,0,.05);
+}
+.card-brand .card-header{
+  font-weight:800; letter-spacing:.02em;
+  background:linear-gradient(100deg, var(--brand), var(--brand-dark)) !important;
+  border-bottom:0;
+}
+.btn-brand{
+  background:linear-gradient(120deg, var(--brand), var(--brand-dark));
+  color:#fff; font-weight:800; border-radius:999px;
+}
+.btn-brand:hover{ filter:brightness(1.05); color:#fff; }
+
+/* inputs */
+.franchise-apply .form-label{ font-weight:600; }
+.franchise-apply .form-control:focus,
+.franchise-apply .form-select:focus{
+  border-color: var(--brand);
+  box-shadow: 0 0 0 .2rem rgba(255,0,0,.15);
+}
+
+/* honeypot – hidden from humans */
+.hp-field{ position:absolute !important; left:-10000px !important; top:auto !important; width:1px !important; height:1px !important; overflow:hidden !important; }
+
+/* tighter help text */
+.form-text{ margin-top:.25rem; }
+
+/* small screens spacing */
+@media (max-width: 576px){
+  .card-brand{ border-radius:14px; }
+}

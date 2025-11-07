@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franchise Enquiry</title>
+                    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="franchise.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+    
+<header class="afc-navbar fixed-top">
+  <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+    <div class="container">
+
+      <!-- Brand (logo left) -->
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="logo.png" alt="American Fried Chicken" class="brand-logo">
+        
+      </a>
+
+      <!-- Toggler (mobile) -->
+      <button class="navbar-toggler text-white border-0" type="button"
+              data-bs-toggle="collapse" data-bs-target="#afcNav"
+              aria-controls="afcNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Links (right side on desktop, collapsible on mobile) -->
+      <div class="collapse navbar-collapse" id="afcNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-4">
+          <!-- Add 'active' to highlight current page -->
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+</header>
+
+
+
+
+
+<!-- ===================== FRANCHISE ENQUIRY ===================== -->
+<section class="section franchise-apply" style="margin-top: 120px;">
+  <div class="container">
+    <header class="text-center mb-4">
+      <span class="tag">American Fried Chicken</span>
+      <h1 class="display-6 fw-bold mt-2">Apply for an AFC Franchise</h1>
+      <p class="text-muted mb-0">This detailed form helps us evaluate serious partners only.  
+        Estimated time: 8–12 minutes.</p>
+    </header>
+
+    <!-- Alerts -->
+    <div class="alert alert-warning small" role="alert">
+      <strong>Note:</strong> Incomplete / vague submissions are automatically filtered out.
+      Please answer every required field carefully.
+    </div>
+
+    <form id="franchiseForm" class="needs-validation" novalidate method="post" enctype="multipart/form-data">
+      <!-- Anti-spam honeypot (leave blank) -->
+      <input type="text" name="company_website" class="hp-field" autocomplete="off" tabindex="-1" aria-hidden="true">
+
+      <!-- ===== Applicant Details ===== -->
+      <div class="card card-brand mb-4">
+        <div class="card-header bg-gradient text-white">
+          <i class="fa-solid fa-id-card me-2"></i> Applicant Details
+        </div>
+        <div class="card-body">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Full Name <span class="text-danger">*</span></label>
+              <input type="text" name="full_name" class="form-control" required>
+              <div class="invalid-feedback">Please enter your full legal name.</div>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Mobile <span class="text-danger">*</span></label>
+              <input type="tel" name="phone" class="form-control" placeholder="+91 9XXXXXXXXX"
+                     pattern="^\+?[0-9\s\-]{8,16}$" required>
+              <div class="invalid-feedback">Enter a valid phone number.</div>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Email <span class="text-danger">*</span></label>
+              <input type="email" name="email" class="form-control" required>
+              <div class="invalid-feedback">Enter a valid email.</div>
+            </div>
+
+            <div class="col-md-4">
+              <label class="form-label">City <span class="text-danger">*</span></label>
+              <input type="text" name="city" class="form-control" required>
+              <div class="invalid-feedback">City is required.</div>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">State / Province <span class="text-danger">*</span></label>
+              <input type="text" name="state" class="form-control" required>
+              <div class="invalid-feedback">State is required.</div>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Country <span class="text-danger">*</span></label>
+              <input type="text" name="country" class="form-control" value="India" required>
+              <div class="invalid-feedback">Country is required.</div>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">LinkedIn (optional)</label>
+              <input type="url" name="linkedin" class="form-control" placeholder="https://linkedin.com/in/…">
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Age (optional)</label>
+              <input type="number" name="age" class="form-control" min="21" max="75">
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">How did you hear about us? <span class="text-danger">*</span></label>
+              <select class="form-select" name="source" required>
+                <option value="" selected disabled>Choose...</option>
+                <option>Existing customer</option><option>Friend/Referral</option>
+                <option>Instagram</option><option>Facebook</option>
+                <option>YouTube</option><option>Expo/Franchise portal</option>
+                <option>Other</option>
+              </select>
+              <div class="invalid-feedback">Please select an option.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== Business Profile ===== -->
+      <div class="card card-brand mb-4">
+        <div class="card-header bg-gradient text-white">
+          <i class="fa-solid fa-briefcase me-2"></i> Business Profile
+        </div>
+        <div class="card-body">
+          <div class="row g-3">
+            <div class="col-md-4">
+              <label class="form-label">Primary Occupation <span class="text-danger">*</span></label>
+              <select class="form-select" name="occupation" required>
+                <option value="" selected disabled>Choose...</option>
+                <option>Business Owner</option><option>Professional</option>
+                <option>Senior Manager</option><option>Investor</option>
+                <option>Other</option>
+              </select>
+              <div class="invalid-feedback">Select your occupation.</div>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Years of Business Experience <span class="text-danger">*</span></label>
+              <input type="number" name="biz_exp" class="form-control" min="0" max="50" required>
+              <div class="invalid-feedback">Enter years of experience.</div>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">F&amp;B Experience (years) <span class="text-danger">*</span></label>
+              <input type="number" name="fnb_exp" class="form-control" min="0" max="50" required>
+              <div class="invalid-feedback">Enter F&amp;B experience (0 if none).</div>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Preferred Role <span class="text-danger">*</span></label>
+              <div class="d-flex flex-wrap gap-3">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="role" id="role1" value="Owner-operator" required>
+                  <label class="form-check-label" for="role1">Owner-operator (daily involvement)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="role" id="role2" value="Investor">
+                  <label class="form-check-label" for="role2">Investor (hire a manager)</label>
+                </div>
+              </div>
+              <div class="invalid-feedback d-block">Choose a role.</div>
+            </div>
+
+            <div class="col-12">
+              <label class="form-label">Do you currently operate any outlets? <span class="text-danger">*</span></label>
+              <div class="row g-2">
+                <div class="col-md-3"><select class="form-select" name="has_outlets" required>
+                  <option value="" selected disabled>Choose...</option><option>No</option><option>Yes</option>
+                </select></div>
+                <div class="col-md-9">
+                  <input type="text" name="outlet_details" class="form-control"
+                         placeholder="If yes, list brands / cities / sizes">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== Investment & Financials ===== -->
+      <div class="card card-brand mb-4">
+        <div class="card-header bg-gradient text-white">
+          <i class="fa-solid fa-sack-dollar me-2"></i> Investment & Financials
+        </div>
+        <div class="card-body">
+          <div class="row g-3">
+            <div class="col-md-4">
+              <label class="form-label">Liquid Capital Available (₹) <span class="text-danger">*</span></label>
+              <input type="number" name="liquid_capital" class="form-control" min="500000" step="50000" required>
+              <div class="form-text">Minimum suggested ₹20–30L for standard dine-in formats.</div>
+              <div class="invalid-feedback">Please indicate available liquid capital.</div>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Approx. Net Worth (₹) <span class="text-danger">*</span></label>
+              <input type="number" name="net_worth" class="form-control" min="1000000" step="100000" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Funding Sources <span class="text-danger">*</span></label>
+              <div class="d-flex flex-wrap gap-3">
+                <div class="form-check"><input class="form-check-input" type="checkbox" name="fund_source[]" value="Own funds" id="fs1" required><label class="form-check-label" for="fs1">Own funds</label></div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" name="fund_source[]" value="Bank loan" id="fs2"><label class="form-check-label" for="fs2">Bank loan</label></div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" name="fund_source[]" value="Partners/Investors" id="fs3"><label class="form-check-label" for="fs3">Partners/Investors</label></div>
+              </div>
+              <div class="invalid-feedback d-block">Select at least one source.</div>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">If bank financing, do you have a relationship manager?</label>
+              <input type="text" name="bank_rm" class="form-control" placeholder="Bank name / RM name (optional)">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Partnership Structure (names & equity split)</label>
+              <input type="text" name="partners" class="form-control" placeholder="e.g., Ali (60%), Zayd (40%)">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== Site / Property Details ===== -->
+      <div class="card card-brand mb-4">
+        <div class="card-header bg-gradient text-white">
+          <i class="fa-solid fa-store me-2"></i> Site / Property Details
+        </div>
+        <div class="card-body">
+          <div class="row g-3">
+            <div class="col-md-4">
+              <label class="form-label">Do you already have a site? <span class="text-danger">*</span></label>
+              <select class="form-select" name="has_site" required>
+                <option value="" selected disabled>Choose...</option>
+                <option>No</option><option>Yes - Own</option><option>Yes - Lease</option>
+              </select>
+              <div class="invalid-feedback">Please specify site availability.</div>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Proposed City / Locality <span class="text-danger">*</span></label>
+              <input type="text" name="site_city" class="form-control" required>
+              <div class="invalid-feedback">Enter the proposed locality.</div>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Format Interested <span class="text-danger">*</span></label>
+              <select class="form-select" name="format" required>
+                <option value="" selected disabled>Choose...</option>
+                <option>Dine-in</option><option>Takeaway</option><option>Food Court</option>
+                <option>Cloud Kitchen</option>
+              </select>
+              <div class="invalid-feedback">Choose a format.</div>
+            </div>
+
+            <div class="col-md-3">
+              <label class="form-label">Carpet Area (sq.ft) <span class="text-danger">*</span></label>
+              <input type="number" name="carpet_area" class="form-control" min="200" max="4000" required>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Frontage (ft)</label>
+              <input type="number" name="frontage" class="form-control" min="8" max="80">
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Planned Seating (covers)</label>
+              <input type="number" name="seating" class="form-control" min="0" max="200">
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Parking Availability</label>
+              <select class="form-select" name="parking">
+                <option>Street</option><option>Dedicated</option><option>Shared</option><option>None</option>
+              </select>
+            </div>
+
+            <div class="col-md-3">
+              <label class="form-label">Power Load (kW)</label>
+              <input type="number" name="power" class="form-control" min="5" max="60">
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Chimney/Exhaust Permission</label>
+              <select class="form-select" name="exhaust_ok">
+                <option>Yes</option><option>No</option><option>Not sure</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Nearby Competition / Anchors</label>
+              <input type="text" name="competition" class="form-control" placeholder="e.g., KFC, McD, mall anchor">
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Upload Site Photos / Layout (JPG/PNG/PDF)</label>
+              <input class="form-control" type="file" name="site_files" accept=".jpg,.jpeg,.png,.pdf" multiple>
+              <div class="form-text">Max 10MB per file.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== Opening Plan ===== -->
+      <div class="card card-brand mb-4">
+        <div class="card-header bg-gradient text-white">
+          <i class="fa-solid fa-calendar-check me-2"></i> Opening Plan
+        </div>
+        <div class="card-body">
+          <div class="row g-3">
+            <div class="col-md-4">
+              <label class="form-label">Target Opening Timeline <span class="text-danger">*</span></label>
+              <select class="form-select" name="timeline" required>
+                <option value="" selected disabled>Choose...</option>
+                <option>0–3 months</option><option>3–6 months</option>
+                <option>6–12 months</option><option>12+ months</option>
+              </select>
+              <div class="invalid-feedback">Select a timeline.</div>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Preferred Model <span class="text-danger">*</span></label>
+              <select class="form-select" name="model" required>
+                <option value="" selected disabled>Choose...</option>
+                <option>FOFO (Franchise Owned / Franchise Operated)</option>
+                <option>FOCO (Franchise Owned / Company Operated)</option>
+              </select>
+              <div class="invalid-feedback">Choose a model.</div>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Daily Involvement <span class="text-danger">*</span></label>
+              <select class="form-select" name="involvement" required>
+                <option value="" selected disabled>Choose...</option>
+                <option>Full-time</option><option>Part-time</option><option>Investor only</option>
+              </select>
+              <div class="invalid-feedback">Please choose one.</div>
+            </div>
+
+            <div class="col-12">
+              <label class="form-label">Why American Fried Chicken? (min 60 words) <span class="text-danger">*</span></label>
+              <textarea class="form-control" name="why_afc" rows="4" minlength="350" required
+                placeholder="Tell us about your motivation, market understanding, and edge in your location…"></textarea>
+              <div class="invalid-feedback">Please write a detailed answer (we read this carefully).</div>
+            </div>
+
+            <div class="col-12">
+              <label class="form-label">Brief Business Plan Summary (min 100 words) <span class="text-danger">*</span></label>
+              <textarea class="form-control" name="plan" rows="5" minlength="600" required
+                placeholder="Capex breakdown, team plan, marketing approach, breakeven estimate…"></textarea>
+              <div class="invalid-feedback">A detailed plan helps us prioritize serious applicants.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== Compliance & Documents ===== -->
+      <div class="card card-brand mb-4">
+        <div class="card-header bg-gradient text-white">
+          <i class="fa-solid fa-shield-check me-2"></i> Compliance & Documents
+        </div>
+        <div class="card-body">
+          <div class="row g-3">
+            <div class="col-md-4">
+              <label class="form-label">PAN (last 4 digits) <span class="text-danger">*</span></label>
+              <input type="text" name="pan_last4" class="form-control" pattern="^[A-Za-z0-9]{4}$" required>
+              <div class="invalid-feedback">Enter last 4 characters only.</div>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Any ongoing litigation? <span class="text-danger">*</span></label>
+              <select class="form-select" name="litigation" required>
+                <option value="" selected disabled>Choose...</option><option>No</option><option>Yes</option>
+              </select>
+              <div class="invalid-feedback">Please answer this question.</div>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">GST Registration (if available)</label>
+              <input type="text" name="gst" class="form-control" placeholder="GSTIN">
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Upload ID Proof (PDF/JPG/PNG) <span class="text-danger">*</span></label>
+              <input class="form-control" type="file" name="id_proof" accept=".pdf,.jpg,.jpeg,.png" required>
+              <div class="invalid-feedback">ID proof is required.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Recent Bank Statement (PDF) <span class="text-danger">*</span></label>
+              <input class="form-control" type="file" name="bank_stmt" accept=".pdf" required>
+              <div class="invalid-feedback">Please upload a PDF bank statement.</div>
+            </div>
+          </div>
+
+          <div class="form-check mt-3">
+            <input class="form-check-input" type="checkbox" value="1" id="agree" required>
+            <label class="form-check-label" for="agree">
+              I confirm the information provided is true and consent to AFC contacting me, conducting background checks,
+              and reviewing my documents for franchise evaluation.
+            </label>
+            <div class="invalid-feedback">You must accept to proceed.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- reCAPTCHA placeholder -->
+      <!-- <div class="g-recaptcha mb-3" data-sitekey="YOUR_SITE_KEY"></div> -->
+
+      <div class="d-grid d-sm-flex gap-2">
+        <button class="btn btn-brand px-4" type="submit">
+          <i class="fa-solid fa-paper-plane me-1"></i> Submit Application
+        </button>
+        <button class="btn btn-outline-secondary" type="reset">Clear</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+<footer class="site-footer text-white mt-5">
+  <div class="container py-5">
+
+    <div class="row g-4 align-items-start">
+      <!-- Col 1: Logo + Social -->
+      <div class="col-12 col-lg-4">
+        <a href="index.html" class="d-inline-flex align-items-center mb-3">
+          <img src="logo.png" alt="American Fried Chicken" class="footer-logo">
+        </a>
+
+        <ul class="list-unstyled d-flex flex-wrap gap-3 mt-3">
+          <li><a class="social-link" href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a class="social-link" href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+          <li><a class="social-link" href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+          <li><a class="social-link" href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
+
+      <!-- Col 2: Quick links -->
+      <div class="col-12 col-lg-4">
+        <h6 class="footer-title">Quick links</h6>
+        <ul class="footer-links list-unstyled m-0">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Contact -->
+      <div class="col-12 col-lg-4">
+        <h6 class="footer-title">Contact us</h6>
+        <ul class="footer-contact list-unstyled m-0">
+          <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:+918888811111">+91 88888 11111</a>, <a href="tel:+919999922222">+91 99999 22222</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:info@americanfriedchicken.com">info@americanfriedchicken.com</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <hr class="footer-divider my-4">
+
+    <!-- Bottom bar -->
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 small text-white-75">
+      <div>americanfriedchicken Copyright © 2025. Spices. All Rights Reserved.</div>
+      <a href="/privacy/" class="link-light text-decoration-none">privacy policy</a>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
+<script>
+(() => {
+  'use strict';
+  const forms = document.querySelectorAll('.needs-validation');
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', e => {
+      // Block bots via honeypot
+      if (form.querySelector('.hp-field')?.value.trim() !== '') { e.preventDefault(); return; }
+      if (!form.checkValidity()) { e.preventDefault(); e.stopPropagation(); }
+      form.classList.add('was-validated');
+    }, false);
+  });
+})();
+</script>
+
+</body>
+</html>

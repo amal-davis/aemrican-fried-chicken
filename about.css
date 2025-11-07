@@ -407,3 +407,95 @@ background: linear-gradient(100deg, #FF0202 0%, #B50000 100%);
 
   /* Small helpers */
   .muted{ color:var(--muted); }
+
+/* ===== About with Media & Icons ===== */
+.about-copy { background:#fff; }
+
+.about-card{
+  max-width: 900px;
+  background:#fff;
+  border:1px solid #e9e9e9;
+  border-radius:16px;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  box-shadow:0 12px 30px rgba(0,0,0,.06);
+}
+
+.about-title{
+  font-family: var(--font-body, "Inter", system-ui);
+  font-weight:800; letter-spacing:.06em; text-transform:uppercase;
+  margin-bottom: .75rem;
+}
+
+/* --- Icon bullets --- */
+.about-iconlist{
+  list-style:none; padding:0; margin: .25rem 0 1rem 0;
+  display:grid; gap:.45rem;
+}
+.about-iconlist li{
+  display:flex; align-items:flex-start; gap:.6rem; color:#111;
+}
+.about-iconlist i{
+  width:1.25rem; text-align:center; margin-top:.2rem;
+  background: linear-gradient(120deg, var(--brand, #ff0000), var(--brand-dark, #a90000));
+  -webkit-background-clip:text; color:transparent;
+}
+
+/* --- Body text --- */
+.about-card p{ color:#222; line-height:1.9; text-align:justify; margin:0 0 1rem; }
+.about-card p strong{ font-weight:800; }
+
+/* --- Founder mini-profile --- */
+.founder-avatar{
+  width:64px; height:64px; object-fit:cover;
+  border-radius:50%; border:3px solid #fff; box-shadow:0 6px 18px rgba(0,0,0,.12);
+}
+
+/* --- Closing quote --- */
+.about-invite{
+  font-weight:700; font-style:italic; text-align:center; margin-top:.8rem;
+}
+
+/* --- Media collage (left) --- */
+.about-media{
+  position:relative;
+  min-height: 460px;
+}
+.about-photo{
+  position:absolute; border-radius:16px; background:#f4f4f4 center/cover no-repeat;
+  box-shadow:0 18px 40px rgba(0,0,0,.12);
+}
+.about-photo.primary{
+  inset: 0 22% 22% 0;                 /* large background block */
+  background-image: url("AFC 68.jpg"); /* fallback if inline style missing */
+}
+.about-photo.secondary{
+  right:0; bottom:0; width:58%; height:54%;
+  background-image: url("AFC 7.jpg");
+  border:6px solid #fff;
+}
+
+/* floating badge */
+.about-badge{
+  position:absolute; left:-6px; top:-10px;
+  display:inline-flex; align-items:center; gap:.5rem;
+  padding:.45rem .65rem;
+  border-radius:999px;
+  background:linear-gradient(120deg, var(--brand, #ff0000), var(--brand-dark, #a90000));
+  color:#fff; font-weight:800; box-shadow:0 10px 24px rgba(0,0,0,.18);
+}
+.about-badge i{ font-size:1rem; }
+
+/* Responsive tweaks */
+@media (max-width: 991.98px){
+  .about-media{ min-height: 360px; margin-bottom:.5rem; }
+  .about-photo.primary{ inset: 0 18% 28% 0; }
+  .about-photo.secondary{ width:64%; height:56%; }
+}
+@media (max-width: 575.98px){
+  .about-media{ min-height: 300px; }
+  .about-photo.primary{ inset: 0 10% 34% 0; border-radius:14px; }
+  .about-photo.secondary{ width:70%; height:54%; border-width:4px; border-radius:14px; }
+  .about-badge{ transform: scale(.95); }
+}
+
+  
